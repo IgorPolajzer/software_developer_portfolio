@@ -1,0 +1,39 @@
+.App {
+  width: 100vw;
+  height: 100vh;
+  align-content: center;
+  align-items: center;
+  overflow: scroll;
+  background: aliceblue;
+}
+
+.topic-box{
+  height: 80%;
+  width: 90%;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 8%;
+  margin-bottom: 5%;
+  border-radius: 5%;
+  box-shadow: 8.0px 16.0px 16.0px hsl(0deg 0% 0% / 0.25);
+}
+
+.nav-bar {
+  position: sticky; /* Use sticky positioning to keep navbar at the top */
+  top: 0; /* Position navbar at the top */
+  background: aliceblue;
+  height: 125px;
+  display: flex; /* Flexbox layout for horizontal alignment */
+  align-items: center; /* Center align vertically */
+  justify-content: space-around; /* Distribute h1 elements evenly */
+  padding: 0 20px; /* Add some padding for spacing */
+}
+
+.nav-bar h1 {
+  font-size: 20px; /* Adjust font size for better fit */
+  margin: 0; /* Remove default margins */
+  color: #333; /* Text color */
+  text-align: center; /* Center text */
+  white-space: nowrap; /* Prevent text from wrapping */
+}

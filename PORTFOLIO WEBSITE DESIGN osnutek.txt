@@ -1,0 +1,6 @@
+PORTFOLIO WEBSITE DESIGN
+
+Na vrhu je navbar(About me, My projects, CV, Linked in, GitHub)
+
+- Landing page => Igor Polajžer - Software developer - slika.
+Ko začneš scrollati se animirano prikazujejo elementi Landing page => About me(Life, Education, hyperlink to CV download) => My skills(Prog languages, hyperlink to projects)
