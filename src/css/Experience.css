@@ -38,7 +38,38 @@ h1{
 }
 
 .separator {
-    width: 2px; /* Thickness of the vertical line */
-    background-color: #000; /* Color of the line */
-    margin: 0 10px; /* Spacing around the line */
+    width: 2px;
+    background-color: #000;
+    margin: 0 10px;
+}
+
+/* Media Query for screens below 800px */
+@media (max-width: 1100px) {
+  .company-grid {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .company {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .separator {
+    display: none;
+  }
+
+  /* Add hr lines between the stacked companies */
+  .company + .company {
+    border-top: 2px solid #000;
+    padding-top: 20px;
+  }
+
+  .company h1 {
+    font-size: 25px;
+  }
+
+  .company p {
+    font-size: 18px;
+  }
 }

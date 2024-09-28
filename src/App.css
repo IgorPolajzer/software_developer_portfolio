@@ -4,6 +4,13 @@
   align-content: center;
   align-items: center;
   overflow-y: scroll;
+  overflow-x: hidden;
   background: #ebebeb;
+}
+
+.aboutme-section,
+.myprojects-section{
+  height: 100vh;
+  width: 100vw;
 }
 

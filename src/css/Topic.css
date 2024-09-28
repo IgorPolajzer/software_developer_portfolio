@@ -79,3 +79,58 @@ h1{
 .topic-box-content-box p{
   font-size: 20px;
 }
+
+/* Media Query for screens below 925px */
+@media (max-width: 925px) {
+  /* Adjust the layout for the topic box */
+  .topic-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 20px;
+  }
+
+  /* Stack the image and content vertically */
+  .topic-box-image-box, .topic-box-w-image-content-box {
+    float: none;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Ensure the image doesn't exceed screen width */
+  .topic-box-image-box img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+  }
+
+  /* Adjust padding for text */
+  .topic-box-w-image-content-box {
+    padding-top: 20px;
+    text-align: center;
+    margin-right: 0;
+  }
+
+  /* Center the text and image box */
+  .topic-box-title h1 {
+    font-size: 35px;
+  }
+
+  .topic-box-title h2 {
+    font-size: 25px;
+  }
+
+  .topic-box-w-image-content-box p {
+    font-size: 18px;
+  }
+
+  .topic-box-content-box p {
+    font-size: 18px;
+  }
+}

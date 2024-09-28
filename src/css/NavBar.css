@@ -1,3 +1,4 @@
+/* General NavBar styles */
 .nav-bar {
   position: sticky;
   top: 0;
@@ -5,15 +6,73 @@
   height: 125px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 0 20px;
+  margin-bottom: 30px;
   z-index: 1000;
 }
 
-.nav-bar h1 {
+.nav-bar .logo {
   font-size: 20px;
-  margin: 0;
   color: #dbdbdb;
-  text-align: center;
   white-space: nowrap;
+  flex: 1;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-links li a {
+  color: #dbdbdb;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.hamburger-icon {
+  display: none;
+  font-size: 30px;
+  color: #dbdbdb;
+  cursor: pointer;
+  flex: 0; /* Make sure it doesn’t grow to take more space */
+}
+
+/* Mobile navigation styles */
+@media (max-width: 800px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger-icon {
+    display: block;
+    padding-left: 10px;
+    font-size: 30px; /* Size the icon appropriately for mobile */
+  }
+
+  .nav-links-mobile {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 125px;
+    left: 0;
+    width: 100%;
+    background-color: #363636;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-links-mobile li {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #474747;
+  }
+
+  .nav-links-mobile li a {
+    color: #dbdbdb;
+    font-size: 20px;
+    text-decoration: none;
+  }
 }
