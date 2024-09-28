@@ -9,7 +9,9 @@
 }
 
 .aboutme-section,
-.myprojects-section{
+.myprojects-section,
+.cv-section,
+.contactme-section{
   height: 100vh;
   width: 100vw;
 }

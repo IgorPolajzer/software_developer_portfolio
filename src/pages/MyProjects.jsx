@@ -1,7 +1,7 @@
 import './../App.css';
 function MyProjects(){
     return(
-        <div className="myprojects-section">ds</div>
+        <div className="myprojects-section">My Projects</div>
     )
 }
 

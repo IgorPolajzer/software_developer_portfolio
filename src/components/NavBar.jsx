@@ -16,14 +16,18 @@ function NavBar() {
           <div className="logo">Igor Polajžer - Portfolio website</div>
 
           <ul className={menuOpened ? 'nav-links-mobile' : 'nav-links'}>
-              <Link to="/">
-                <li><a>About me</a></li>
+              <Link to="/" className="nav-link">
+                About me
               </Link>
-              <Link to="/projects">
-              <li><a>My projects</a></li>
+              <Link to="/projects" className="nav-link">
+                My projects
               </Link>
-              <li><a>CV - Curriculum Vitae</a></li>
-              <li><a>Contact me</a></li>
+              <Link to="/cv" className="nav-link">
+                CV - Curriculum Vitae
+              </Link>
+              <Link to="/contact" className="nav-link">
+                Contact me
+              </Link>
           </ul>
 
           <div className="hamburger-icon" onClick={handleMobileMenuToggle}>

@@ -25,9 +25,10 @@
   list-style: none;
 }
 
-.nav-links li a {
+.nav-link{
   color: #dbdbdb;
   text-decoration: none;
+  padding-left: 20px;
   font-size: 20px;
 }
 
@@ -40,7 +41,7 @@
 }
 
 /* Mobile navigation styles */
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .nav-links {
     display: none;
   }
@@ -53,6 +54,7 @@
 
   .nav-links-mobile {
     display: flex;
+    opacity: 0.95;
     flex-direction: column;
     position: absolute;
     top: 125px;
@@ -64,13 +66,9 @@
     margin: 0;
   }
 
-  .nav-links-mobile li {
-    padding: 15px;
+  .nav-link {
     text-align: center;
-    border-bottom: 1px solid #474747;
-  }
-
-  .nav-links-mobile li a {
+    padding: 8px;
     color: #dbdbdb;
     font-size: 20px;
     text-decoration: none;
