@@ -1,6 +1,6 @@
 .skills-section {
     padding: 20px;
-    height: 5px;
+    height: 600px;
     text-align: center;
 }
 
@@ -10,9 +10,10 @@
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     grid-gap: 25px;
     padding: 20px;
+    overflow: hidden;
 }
 
 .skill {
