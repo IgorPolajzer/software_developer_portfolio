@@ -45,3 +45,8 @@
     font-size: 1.2rem;
     margin: 0;
 }
+
+.href-to-projects-box h2{
+    margin-left: 7.5px;
+    display: inline-block;
+}

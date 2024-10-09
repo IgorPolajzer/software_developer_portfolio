@@ -1,8 +1,7 @@
-/* General NavBar styles */
 .nav-bar {
   position: sticky;
   top: 0;
-  background: #363636;
+  background: #0d1b2a;
   height: 125px;
   display: flex;
   align-items: center;
@@ -30,6 +29,11 @@
   text-decoration: none;
   padding-left: 20px;
   font-size: 20px;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: #b7cce1;
 }
 
 .hamburger-icon {
@@ -60,7 +64,7 @@
     top: 125px;
     left: 0;
     width: 100%;
-    background-color: #363636;
+    background-color: #0d1b2a;
     list-style: none;
     padding: 0;
     margin: 0;

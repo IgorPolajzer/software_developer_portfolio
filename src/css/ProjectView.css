@@ -1,0 +1,52 @@
+.in-progress-project-section{
+      height: 83.5%;
+}
+
+.technologies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 16px;
+    padding: 20px;
+}
+
+.technology-item {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.in-progress-project,
+.technologies-grid{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+}
+
+h1{
+    font-weight: bold;
+}
+
+.title-github-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.github-icon {
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.github-icon-svg {
+    transform: scale(0.60)
+}
+
+
+.github-icon:hover {
+    opacity: 0.7;
+}

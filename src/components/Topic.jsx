@@ -1,4 +1,5 @@
 import './../css/Topic.css';
+import './../App.css'
 import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -46,8 +47,8 @@ function Topic(props) {
       className="topic-box"
     >
       <div className="topic-box-title">
-        <h1>{props.title}</h1>
-        <h2>{props.subtitle}</h2>
+        <h1 className="title">{props.title}</h1>
+        <h2 className="subtitle">{props.subtitle}</h2>
       </div>
       {props.image && (
         <div className="topic-box-image-box">
@@ -55,7 +56,7 @@ function Topic(props) {
         </div>
       )}
       <div className={props.image ? "topic-box-w-image-content-box" : "topic-box-content-box"}>
-        <p>{props.text}</p>
+        <p className="text">{props.text}</p>
       </div>
     </motion.div>
   );

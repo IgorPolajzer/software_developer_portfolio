@@ -1,6 +1,8 @@
 import './../css/Skills.css';
 import './../css/Topic.css';
+import './../App.css'
 import React from "react";
+import {Link} from "react-router-dom";
 import { ReactComponent as CPlusPlus } from './../assets/icons/c-plusplus.svg'
 import { ReactComponent as HTML } from './../assets/icons/html-5.svg'
 import { ReactComponent as CSS } from './../assets/icons/css-3.svg'
@@ -22,8 +24,13 @@ function Skills(props) {
     return (
         <div className="skills-section">
             <div className="topic-box-title">
-                <h1>My Skills</h1>
-                <h2>IF YOU WANT TO SEE MY SKILL'S IN ACTION TAKE A LOOK AT MY PROJECTS</h2>
+                <h1 className="title">My Skills</h1>
+                <div className="href-to-projects-box">
+                    <h2 className="subtitle">IF YOU WANT TO SEE MY SKILL'S IN ACTION TAKE A LOOK AT</h2>
+                    <h2 className="subtitle">
+                        <Link to="/projects">MY PROJECTS</Link>
+                    </h2>
+                </div>
             </div>
             <div className="skills-grid">
                 <div className="skill">
@@ -78,7 +85,7 @@ function Skills(props) {
                     <div className="skill-icon">
                         <Docker/>
                     </div>
-                    <p>docker/dockerhub</p>
+                    <p>docker</p>
                 </div>
                 <div className="skill">
                     <div className="skill-icon">

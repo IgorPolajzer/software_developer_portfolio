@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
 .App {
   width: 100vw;
   height: 100vh;
@@ -5,13 +7,34 @@
   align-items: center;
   overflow-y: scroll;
   overflow-x: hidden;
-  background: #ebebeb;
+  background: linear-gradient(0deg, #e0e1dd 5%, #1b263b 100%);
+}
+
+
+h1,
+h2,
+p,
+.nav-link,
+.logo{
+  /*color: */
+  font-family: 'Poppins'
+}
+
+.title,
+.text{
+  color: #0d1b2a;
+}
+
+.subtitle{
+  color: #b7cce1;
 }
 
 .aboutme-section,
-.myprojects-section,
+.myprojects-section ,
 .cv-section,
-.contactme-section{
+.contactme-section,
+.completed-project-section,
+.in-progress-project-section{
   height: 100vh;
   width: 100vw;
 }
