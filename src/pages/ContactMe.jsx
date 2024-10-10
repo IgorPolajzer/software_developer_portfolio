@@ -3,19 +3,20 @@ import './../css/ContactMe.css'
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { ReactComponent as LinkedInLogo } from './../assets/linkedin-icon.svg'
-function CurriculumVitae(){
+function ContactMe(){
     const form = useRef();
-
+    console.log(process.env.REACT_APP_ENV);
     const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs
-      .sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, {
-        publicKey: 'YOUR_PUBLIC_KEY',
+      .sendForm(process.env.REACT_APP_EMAIL_JS_SERVICE_ID, process.env.REACT_APP_EMAIL_JS_TEMPLATE_ID, form.current, {
+        publicKey: process.env.REACT_APP_EMAIL_JS_PUBLIC_KEY,
       })
       .then(
         () => {
           console.log('SUCCESS!');
+          e.target.reset();
         },
         (error) => {
           console.log('FAILED...', error.text);
@@ -36,23 +37,30 @@ function CurriculumVitae(){
                                 <a href={"https://www.linkedin.com/in/igor-polaj%C5%BEer-872195293/"} target="_blank"
                                    rel="noopener noreferrer"
                                    className="linkedin-icon">
-                                    <LinkedInLogo classname={"linkedin-icon-svg"}/>
+                                    <LinkedInLogo className={"linkedin-icon-svg"}/>
                                 </a>
                             </div>
                         </div>
                         <hr></hr>
-                        <form>
+                        <form ref={form} onSubmit={sendEmail}>
                             <div className="mb-3">
-                                <label htmlFor="exampleFormControlInput1" className="form-label">Your email address: </label>
-                                <input type="email" className="form-control" id="exampleFormControlInput1"
-                                       placeholder="name@example.com"/>
+                                <label htmlFor="exampleFormControlInput1" className="form-label">Your name: </label>
+                                <input className="form-control" id="exampleFormControlInput1"
+                                       placeholder="Your name" name="user_name"/>
                             </div>
                             <div className="mb-3">
-                                <label htmlFor="exampleFormControlTextarea1" className="form-label">Your message: </label>
+                                <label htmlFor="exampleFormControlInput2" className="form-label">Your email
+                                    address: </label>
+                                <input type="email" className="form-control" id="exampleFormControlInput2"
+                                       placeholder="name@example.com" name="user_email"/>
+                            </div>
+                            <div className="mb-3">
+                                <label htmlFor="exampleFormControlTextarea1" className="form-label">Your
+                                    message: </label>
                                 <textarea className="form-control" id="exampleFormControlTextarea1"
-                                          rows="19"></textarea>
+                                          rows="19" name="message"></textarea>
                             </div>
-                            <button type="send" className="btn btn-primary">Send</button>
+                            <button type="submit" className="btn btn-primary">Send</button>
                         </form>
                     </div>
                 </div>
@@ -61,4 +69,4 @@ function CurriculumVitae(){
     )
 }
 
-export default CurriculumVitae;
+export default ContactMe;
