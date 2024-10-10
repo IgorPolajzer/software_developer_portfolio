@@ -1,5 +1,5 @@
 import './../App.css';
-import './../css/MyProjects.css'
+import '../css/MyProjects.css'
 import Project from './../components/Project';
 import Direct4Me from './../assets/direct4me_project.png';
 import Portfolio from './../assets/portfolio_project.png'
@@ -24,6 +24,8 @@ function MyProjects(){
                      title={"SyncFluencer - social media tool"}
                      status={"In progress"}
                      navigation={"sync-fluencer-project"}/>
+            <Project/>
+            <Project/>
         </div>
     )
 }

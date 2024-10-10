@@ -33,7 +33,7 @@ function NavBar() {
 
           <div className="hamburger-icon" onClick={handleMobileMenuToggle}>
               {menuOpened ? (
-                  <CloseIcon/>
+                  <CloseIcon height={70} width={70}/>
               ) : (
                   <HamburgerIcon/>
               )}

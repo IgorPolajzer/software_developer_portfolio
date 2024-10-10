@@ -5,7 +5,7 @@
   height: 100vh;
   align-content: center;
   align-items: center;
-  overflow-y: scroll;
+  overflow-y: auto;
   overflow-x: hidden;
   background: linear-gradient(0deg, #e0e1dd 5%, #1b263b 100%);
 }
@@ -16,7 +16,6 @@ h2,
 p,
 .nav-link,
 .logo{
-  /*color: */
   font-family: 'Poppins'
 }
 
@@ -30,12 +29,16 @@ p,
 }
 
 .aboutme-section,
-.myprojects-section ,
-.cv-section,
+.myprojects-section,
 .contactme-section,
-.completed-project-section,
-.in-progress-project-section{
-  height: 100vh;
+.project-section{
+  margin-top: 30px; /*NavBar adjustment*/
+  height: 83.4vh; /*NavBar adjustment*/
+  width: 100vw;
+}
+
+.cv-section{
+  height: 100vh; /*NavBar adjustment*/
   width: 100vw;
 }
 

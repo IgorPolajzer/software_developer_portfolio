@@ -4,11 +4,10 @@ import { ReactComponent as GithubLogo } from './../assets/icons/github-mark.svg'
 
 function ProjectView(props) {
     return (
-        <div className="in-progress-project-section">
+        <div className="project-section">
             <div className="container mt-4">
                 <div className="card">
                     <div className="card-body">
-                        {/* Flex container for title and GitHub icon */}
                         <div className="title-github-container">
                             <h1 className="card-title">
                                 {props.completed ? props.title : `${props.title} - In progress`}

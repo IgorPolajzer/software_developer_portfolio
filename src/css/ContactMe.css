@@ -1,0 +1,35 @@
+.contactme-section{
+
+}
+
+.title-linkedin-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.linked-in-caption-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.linkedin-icon {
+    margin-right: 20px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+
+.linkedin-icon-svg {
+    transform: scale(1);
+}
+
+
+.linkedin-icon:hover {
+    opacity: 0.7;
+}
+
+.send{
+    float: right;
+}

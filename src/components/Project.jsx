@@ -6,8 +6,8 @@ function Project(props) {
 
     if (props.title) {
         return (
-            <Link to={props.navigation}>
-                <div className="project-box">
+            <div className="project-box">
+                <Link to={props.navigation}>
                     <img className="project-img" src={props.image}/>
                     <div className="project-data-box">
                         <h1 className={"project-title"}>{props.title}</h1>
@@ -15,9 +15,10 @@ function Project(props) {
                             {props.status}
                         </h1>
                     </div>
-                </div>
-            </Link>
-        );
+                </Link>
+            </div>
+    )
+        ;
     } else {
         return (
             <div className="project-box">

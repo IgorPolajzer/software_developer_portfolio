@@ -11,8 +11,8 @@ import MobileAppVideo from "./assets/direct4me_project/R-AID_mobilna_aplikacija_
 
 function App() {
   return (
-  <Router>
-      <div className="App">
+    <Router>
+        <div className="App">
         <NavBar />
         <Routes>
           <Route path="/" element={<AboutMe />} />
@@ -51,6 +51,7 @@ function App() {
                 description={"This project is a dynamic portfolio website built with React and hosted on AWS Amplify, showcasing my journey as a software developer. It features information about my background, skills, and work experience, along with a preview and downloadable CV. Visitors can explore detailed descriptions of my projects and easily contact me through a form that sends emails directly to my inbox. Additionally, links to my LinkedIn and GitHub profiles are available for further connection and exploration of my work."}
                 technologies={{
                     "Frontend": "React, Bootstrap, CSS, Framer Motion",
+                    "Email service": "EmailJs",
                     "Hosting": "AWS Amplify",
                     "Domain provider": "AWS Route 53",
                   }}
@@ -85,7 +86,7 @@ function App() {
                 />
           }/>
         </Routes>
-      </div>
+        </div>
     </Router>
   );
 }
