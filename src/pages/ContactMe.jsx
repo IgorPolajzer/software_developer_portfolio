@@ -58,7 +58,7 @@ function ContactMe(){
                                 <label htmlFor="exampleFormControlTextarea1" className="form-label">Your
                                     message: </label>
                                 <textarea className="form-control" id="exampleFormControlTextarea1"
-                                          rows="19" name="message"></textarea>
+                                          rows="15" name="message"></textarea>
                             </div>
                             <button type="submit" className="btn btn-primary">Send</button>
                         </form>
