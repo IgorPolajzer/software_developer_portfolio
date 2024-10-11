@@ -9,7 +9,6 @@ function ContactMe(){
     const sendEmail = (e) => {
     e.preventDefault();
 
-    // test
     emailjs
       .sendForm(process.env.REACT_APP_EMAIL_JS_SERVICE_ID, process.env.REACT_APP_EMAIL_JS_TEMPLATE_ID, form.current, {
         publicKey: process.env.REACT_APP_EMAIL_JS_PUBLIC_KEY,
