@@ -11,6 +11,7 @@ function CurriculumVitae() {
         <div className="cv-section">
             {isMobile ? (
                 <>
+                    <br></br>
                     <p>Viewing the PDF is not available on mobile yet, download the PDF instead.</p>
                     <a href={CV} download className="pdf-download-link">
                         Download CV
