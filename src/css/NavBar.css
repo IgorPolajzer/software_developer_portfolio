@@ -11,7 +11,7 @@
     z-index: 1000;
   }
 
-  .nav-bar .logo {
+  .nav-bar .title {
     font-size: 20px;
     color: #dbdbdb;
     white-space: nowrap;
@@ -78,3 +78,11 @@
       text-decoration: none;
     }
   }
+
+  @media (max-width: 400px) {
+    .title {
+      text-indent: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+}

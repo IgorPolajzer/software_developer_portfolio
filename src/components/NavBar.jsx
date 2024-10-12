@@ -14,7 +14,7 @@ function NavBar() {
 
   return (
       <div className="nav-bar">
-          <div className="logo">Igor Polajžer - Software developer</div>
+          <div className="title">Igor Polajžer - Software developer</div>
 
           <ul className={menuOpened ? 'nav-links-mobile' : 'nav-links'}>
               <Link to="/" className="nav-link">
