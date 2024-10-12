@@ -3,12 +3,13 @@
     width: 100%;
     top: 0;
     background: #0d1b2a;
-    height: 125px;
+    min-height: 125px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
     z-index: 1000;
+    -webkit-overflow-scrolling: touch; /* Enable momentum scrolling */
   }
 
   .nav-bar .title {
