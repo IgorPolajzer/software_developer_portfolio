@@ -43,7 +43,7 @@ p,
 }
 
 .cv-section{
-  /*padding-top: 125px;*/
+  padding-top: 125px;
   height: 98.5vh; /*NavBar adjustment*/
   height: 98.5svh;
   width: 100vw;

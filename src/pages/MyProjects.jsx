@@ -4,7 +4,7 @@ import Project from './../components/Project';
 import Direct4Me from './../assets/direct4me_project.png';
 import Portfolio from './../assets/portfolio_project.png'
 import SyncFluencer from './../assets/syncfluencer-project.png'
-import TankTitans from './../assets/tank_titans_project.png';
+import TankTitans from '../assets/tanktitans_project/tank_titans_project.png';
 function MyProjects(){
     return(
         <div className="myprojects-section">
