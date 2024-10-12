@@ -55,7 +55,6 @@ p,
     .contactme-section,
     .project-section,
     .cv-section{
-      margin-top: 30%; /*NavBar adjustment*/
       height: 83.4vh; /*NavBar adjustment*/
       height: 83.4svh;
       width: 100vw;
