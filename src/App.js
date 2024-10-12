@@ -14,13 +14,13 @@ function App() {
   return (
       <>
           <Helmet>
-                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                <title>Igor Polajžer</title>
-                <meta name="description" content="Igor Polajžer software developer portfolio webiste" />
+              <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+              <title>Igor Polajžer</title>
+              <meta name="description" content="Igor Polajžer software developer portfolio webiste"/>
           </Helmet>
           <Router>
               <div className="App">
-                  <NavBar/>
+              <NavBar/>
                   <Routes>
                       <Route path="/" element={<AboutMe/>}/>
                       <Route path="/projects" element={<MyProjects/>}/>
