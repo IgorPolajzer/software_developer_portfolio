@@ -1,18 +1,23 @@
 import React from 'react';
 import './../App.css';
-import './../css/CurriculumVitae.css'
+import './../css/CurriculumVitae.css';
 import CV from './../assets/Igor_Polajzer_CV_English.pdf';
 
 function CurriculumVitae() {
-
     return (
         <div className="cv-section">
-            <object data={CV} type="application/pdf" className="pdf">
-                    <p>Looks like the pdf representation failed, try to change your browser/device or just </p>
+            <iframe
+                src={CV}
+                title="Curriculum Vitae"
+                className="pdf"
+            >
+                <p>
+                    It appears that the PDF cannot be displayed. You can
                     <a href={CV} download className="pdf-download-link">
-                        Download CV
-                    </a>
-            </object>
+                        download the CV
+                    </a>.
+                </p>
+            </iframe>
         </div>
     );
 }
