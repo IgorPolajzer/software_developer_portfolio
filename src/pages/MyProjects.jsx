@@ -18,7 +18,7 @@ function MyProjects(){
                      navigation={"tank-titans"}/>
             <Project image={Portfolio}
                      title={"Personal portfolio website"}
-                     status={"In progress"}
+                     status={"Completed"}
                      navigation={"personal-portfolio-project"}/>
             <Project image={SyncFluencer}
                      title={"SyncFluencer - social media tool"}

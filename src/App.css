@@ -36,7 +36,7 @@ p,
 .myprojects-section,
 .contactme-section,
 .project-section{
-  margin-top: 150px; /*NavBar adjustment*/
+  margin-top: 8%; /*NavBar adjustment*/
   height: 83.4vh; /*NavBar adjustment*/
   height: 83.4svh;
   width: 100vw;
