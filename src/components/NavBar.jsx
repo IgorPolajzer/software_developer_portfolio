@@ -13,7 +13,7 @@ function NavBar() {
   };
 
   return (
-      <div className="nav-bar" style={{background: menuOpened ? "rgba(12, 27, 42, 1)" : "rgba(12, 27, 42, 0)"}}>
+      <div className="nav-bar">
           <div className="hamburger-icon" onClick={handleMobileMenuToggle}>
               {menuOpened ? (
                   <CloseIcon height={70} width={70}/>
