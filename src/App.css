@@ -55,8 +55,9 @@ p,
     .contactme-section,
     .project-section,
     .cv-section{
-      height: 100vh; /*NavBar adjustment*/
-      height: 100svh;
+      margin-top: 8%; /*NavBar adjustment*/
+      height: 83.4vh; /*NavBar adjustment*/
+      height: 83.4svh;
       width: 100vw;
     }
 }
