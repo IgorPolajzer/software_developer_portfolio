@@ -15,7 +15,7 @@ function App() {
       <>
           <Helmet>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                <title>Your App Title</title>
+                <title>Igor Polajžer</title>
                 <meta name="description" content="Igor Polajžer software developer portfolio webiste" />
           </Helmet>
           <Router>
