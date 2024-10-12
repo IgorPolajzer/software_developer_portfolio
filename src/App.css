@@ -49,3 +49,16 @@ p,
   width: 100vw;
 }
 
+@media(max-width:1000px){
+    .aboutme-section,
+    .myprojects-section,
+    .contactme-section,
+    .project-section,
+    .cv-section{
+      margin-top: 15%; /*NavBar adjustment*/
+      height: 83.4vh; /*NavBar adjustment*/
+      height: 83.4svh;
+      width: 100vw;
+    }
+}
+
