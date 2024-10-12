@@ -1,5 +1,5 @@
   .nav-bar {
-    position: relative;
+    position: fixed;
     width: 100%;
     top: 0;
     background: #0d1b2a;
