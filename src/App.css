@@ -3,13 +3,13 @@
 .App {
   width: 100vw;
   height: 100vh;
+  height: 100svh;
   align-content: center;
   align-items: center;
   overflow-y: auto;
   overflow-x: hidden;
   background: linear-gradient(0deg, #e0e1dd 5%, #1b263b 100%);
 }
-
 
 h1,
 h2,
@@ -32,13 +32,14 @@ p,
 .myprojects-section,
 .contactme-section,
 .project-section{
-  margin-top: 30px; /*NavBar adjustment*/
+  margin-top: 150px; /*NavBar adjustment*/
   height: 83.4vh; /*NavBar adjustment*/
   width: 100vw;
 }
 
 .cv-section{
-  height: 100vh; /*NavBar adjustment*/
+  padding-top: 125px;
+  height: 98.5vh; /*NavBar adjustment*/
   width: 100vw;
 }
 

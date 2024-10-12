@@ -13,7 +13,7 @@ function App() {
   return (
     <Router>
         <div className="App">
-        <NavBar />
+        <NavBar/>
         <Routes>
           <Route path="/" element={<AboutMe />} />
           <Route path="/projects" element={<MyProjects />} />
@@ -56,6 +56,7 @@ function App() {
                     "Domain provider": "AWS Route 53",
                   }}
                 completed={false}
+                url={"https://igorpolajzer.com"}
                 githubUrl={"https://github.com/IgorPolajzer/software_developer_portfolio"}
           />} />
           <Route path="/projects/sync-fluencer-project" element={

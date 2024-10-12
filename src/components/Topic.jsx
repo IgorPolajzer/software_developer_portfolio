@@ -52,7 +52,7 @@ function Topic(props) {
       </div>
       {props.image && (
         <div className="topic-box-image-box">
-          <img src={props.image} alt="profile_picture" />
+          <img src={props.image} alt="profile_picture" className="topic-box-image"/>
         </div>
       )}
       <div className={props.image ? "topic-box-w-image-content-box" : "topic-box-content-box"}>

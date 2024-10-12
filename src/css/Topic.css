@@ -34,7 +34,7 @@
   height: 65%;
 }
 
-.topic-box-image-box img {
+.topic-box-image {
   width: 400px; /* Set a square size */
   height: 400px;
   border-radius: 50%;
