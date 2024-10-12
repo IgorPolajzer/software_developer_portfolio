@@ -13,24 +13,7 @@ function NavBar() {
   };
 
   return (
-      <div className="nav-bar">
-          <div className="title">Igor Polajžer - Software developer</div>
-
-          <ul className={menuOpened ? 'nav-links-mobile' : 'nav-links'}>
-              <Link to="/" className="nav-link">
-                About me
-              </Link>
-              <Link to="/projects" className="nav-link">
-                My projects
-              </Link>
-              <Link to="/cv" className="nav-link">
-                CV - Curriculum Vitae
-              </Link>
-              <Link to="/contact" className="nav-link">
-                Contact me
-              </Link>
-          </ul>
-
+      <div className="nav-bar" style={{background: menuOpened ? "rgba(12, 27, 42, 1)" : "rgba(12, 27, 42, 0)"}}>
           <div className="hamburger-icon" onClick={handleMobileMenuToggle}>
               {menuOpened ? (
                   <CloseIcon height={70} width={70}/>
@@ -38,6 +21,15 @@ function NavBar() {
                   <HamburgerIcon/>
               )}
           </div>
+
+          <div className="title">Igor Polajžer - Software developer</div>
+
+          <ul className={menuOpened ? 'nav-links-mobile' : 'nav-links'}>
+              <Link to="/" className="nav-link">About me</Link>
+              <Link to="/projects" className="nav-link">My projects</Link>
+              <Link to="/cv" className="nav-link">CV - Curriculum Vitae</Link>
+              <Link to="/contact" className="nav-link">Contact me</Link>
+          </ul>
       </div>
   );
 }
