@@ -13,10 +13,15 @@ function ProjectView(props) {
                                 {props.completed ? props.title : `${props.title} - In progress`}
                             </h1>
                             {props.githubUrl && (
-                                <a href={props.githubUrl} target="_blank" rel="noopener noreferrer"
-                                   className="github-icon">
-                                    <GithubLogo className="github-icon-svg"/>
-                                </a>
+                                <div className="github-container">
+                                    <a href={props.githubUrl} target="_blank" rel="noopener noreferrer"
+                                       className="github-icon">
+                                        <GithubLogo className="github-icon-svg"/>
+                                    </a>
+                                    <p className="private-repo-warning">
+                                        This repo might be private. Contact for access.
+                                    </p>
+                                </div>
                             )}
                         </div>
 
