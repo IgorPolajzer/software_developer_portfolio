@@ -25,11 +25,11 @@ p,
 
 .title,
 .text{
-  color: #0d1b2a;
+  color: #dbdbdb;
 }
 
 .subtitle{
-  color: #b7cce1;
+  color: rgba(134, 193, 236, 0.89);
 }
 
 .aboutme-section,

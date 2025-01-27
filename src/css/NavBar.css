@@ -2,7 +2,7 @@
     position: fixed;
     width: 100%;
     top: 0;
-    background: #0d1b2a;
+    background: rgba(13, 27, 42, 0.4);
     min-height: 125px;
     display: flex;
     align-items: center;
@@ -13,7 +13,8 @@
 
   .nav-bar .title {
     font-size: 20px;
-    color: #dbdbdb;
+    color: #FFFFFF;
+    font-weight: bold;
     white-space: nowrap;
     flex: 1;
   }
@@ -31,9 +32,12 @@
     font-size: 20px;
   }
 
+
   .nav-link:hover,
   .nav-link:focus {
-    color: #b7cce1;
+     color: #FFFFFF;
+     text-shadow: 0 0 10px #FFFFFF;
+     font-weight: bold;
   }
 
   .hamburger-icon {
@@ -75,7 +79,7 @@
       top: 125px;
       left: 0;
       width: 100%;
-      background: rgba(13, 27, 42, 0.9);
+      background: rgba(13, 27, 42, 0.4);
       list-style: none;
       padding: 0;
       margin: 0;
@@ -84,9 +88,16 @@
     .nav-link {
       text-align: center;
       padding: 8px;
-      color: #dbdbdb;
+      color: #FFFFFF;
       font-size: 20px;
       text-decoration: none;
+      transition: color 0.3s, text-shadow 0.3s;
+    }
+
+    .nav-link:hover {
+      color: #FFFFFF;
+      text-shadow: 0 0 10px #FFFFFF;
+      font-weight: bold;
     }
   }
 

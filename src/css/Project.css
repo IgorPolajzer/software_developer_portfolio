@@ -2,7 +2,7 @@
     height: 350px;
     width: 100%;
     overflow: hidden;
-    background: #bcbcbc;
+    background: rgba(13, 27, 42, 0.9);
     border-radius: 40px;
     display: flex;
     flex-direction: column;
@@ -64,4 +64,8 @@
     width: 100%;
     height: 100%;
     text-align: center;
+}
+
+.coming-soon-box h1 {
+    color: #dbdbdb;
 }

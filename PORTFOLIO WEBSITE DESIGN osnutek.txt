@@ -1,0 +1,18 @@
+PORTFOLIO WEBSITE DESIGN
+
+Na vrhu je navbar(About me, My projects, CV, Linked in, GitHub)
+
+- Landing page => Igor Polajžer - Software developer - slika.
+Ko začneš scrollati se animirano prikazujejo elementi Landing page => About me(Life, Education, hyperlink to CV download) => My skills(Prog languages, hyperlink to projects)
+
+About me:
+
+Igor Polajžer
+SOFTWARE DEVELOPER
+
+"The art of programming is the art of organizing complexity, of mastering multitude and avoiding its bastard chaos as effectively as possible." - Edsger Dijkstra
+
+About me
+LIFE AND EDUCATION
+
+I am Igor Polajžer, a dedicated 21-year-old student pursuing a degree in Computer Science at the Faculty of Electrical Engineering and Computer Science (FERI) in Maribor. Currently in my third and also last year of studies, I exhibit a strong work ethic and a relentless drive to acquire new skills and experiences within the tech industry.

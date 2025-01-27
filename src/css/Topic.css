@@ -39,7 +39,7 @@
   height: 400px;
   border-radius: 50%;
   object-fit: cover; /* Ensures the image fills the circle without distortion */
-  border: 5px solid #000;
+  border: 5px solid #bebebe;
 }
 
 .topic-box-w-image-content-box{
