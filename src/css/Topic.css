@@ -8,7 +8,31 @@
   border-radius: 5%;
   box-shadow: 8.0px 16.0px 16.0px hsl(0deg 0% 0% / 0.25);
   overflow-y: auto;
+
 }
+
+.topic-box {
+  /* Reset properties outside the media query */
+  display: block; /* Default display */
+  flex-direction: initial; /* Reset flex direction */
+  align-items: initial; /* Reset align-items */
+  height: 95%; /* Ensure height is consistent */
+  padding: 0; /* Reset padding */
+  position: static; /* Reset position */
+  z-index: auto; /* Reset z-index */
+}
+
+.topic-box-image-box,
+.topic-box-w-image-content-box {
+  float: left; /* Restore float */
+  width: 50%; /* Restore default width */
+  height: 65%; /* Restore height */
+  margin: initial; /* Reset margins */
+  padding: initial; /* Reset padding */
+  display: block; /* Restore default display */
+  flex-direction: initial; /* Reset flex direction */
+}
+
 
 .topic-box-title{
   padding-top: 1%;
@@ -85,6 +109,8 @@
     align-items: center;
     height: auto;
     padding: 20px;
+    position: relative;
+    z-index: 10; /* Higher than the background */
   }
 
   /* Stack the image and content vertically */

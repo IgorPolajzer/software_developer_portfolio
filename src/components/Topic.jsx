@@ -7,7 +7,7 @@ import { useInView } from "react-intersection-observer";
 function Topic(props) {
   const controls = useAnimation();
   const {ref, inView} = useInView({
-    rootMargin: "-125px -500px 0px 0px",
+    rootMargin: "-50px 0px", // Adjusted to be more stable
   });
 
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 525);
@@ -29,8 +29,8 @@ function Topic(props) {
   }, [controls, inView]);
 
   const variants = {
-    hidden: {x: "-100%", opacity: 0},
-    visible: {x: 0, opacity: 1, transition: {duration: 1, ease: "easeOut"}},
+    hidden: { opacity: 0 },
+    visible: {x: 0, opacity: 1, transition: {duration: 1.5, ease: "easeOut"}},
   };
 
   let content;
@@ -67,7 +67,7 @@ function Topic(props) {
     <motion.div
       ref={ref}
       initial="hidden"
-      animate={controls}
+    animate={isSmallScreen ? "visible" : controls} // Only animate on large screens
       variants={variants}
       className="topic-box"
     >
