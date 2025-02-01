@@ -8,6 +8,7 @@ import CurriculumVitae from "./pages/CurriculumVitae";
 import ContactMe from "./pages/ContactMe";
 import ProjectView from "./pages/ProjectView";
 import MobileAppVideo from "./assets/direct4me_project/R-AID_mobilna_aplikacija_video.mp4";
+import TankTitansDemoVideo from "./assets/tanktitans_project/tank_titans_video.mp4";
 
 function App() {
   return (
@@ -82,6 +83,15 @@ function App() {
                       "Library": "PyGame"
                   }}
                   completed={true}
+                    custom={
+                      <div>
+                          <h3 className="subtitle">Project demo:</h3>
+                          <video width={"100%"} height={"100%"} controls>
+                              <source src={TankTitansDemoVideo} type="video/mp4"/>
+                              Your browser does not support the video tag.
+                          </video>
+                      </div>
+                  }
                   githubUrl={"https://github.com/R-AID-Github/RAZVOJ-PROGRAMSKIH-SISTEMOV"}
                 />
           }/>
