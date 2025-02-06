@@ -8,6 +8,7 @@ import CurriculumVitae from "./pages/CurriculumVitae";
 import ContactMe from "./pages/ContactMe";
 import ProjectView from "./pages/ProjectView";
 import MobileAppVideo from "./assets/direct4me_project/R-AID_mobilna_aplikacija_video.mp4";
+import ChessVideo from "./assets/chess_project/Igor_Polajzer_chess.mp4";
 import TankTitansDemoVideo from "./assets/tanktitans_project/tank_titans_video.mp4";
 
 function App() {
@@ -94,6 +95,26 @@ function App() {
                   }
                   githubUrl={"https://github.com/R-AID-Github/RAZVOJ-PROGRAMSKIH-SISTEMOV"}
                 />
+          }/>
+        <Route path="/projects/chess-project" element={<ProjectView
+          title={"Chess"}
+          description={"Chess is a simple game built in Java with LibGDX, allowing two players to play on a single computer. It features a clean design and smooth gameplay, bringing the classic game of chess to life."}
+          technologies={{
+            "language": "Java",
+            "Framework": "LibGdx"
+          }}
+          completed={true}
+          custom={
+              <div>
+                  <h3 className="subtitle">Project demo:</h3>
+                  <video width={"100%"} height={"100%"} controls>
+                      <source src={ChessVideo} type="video/mp4"/>
+                      Your browser does not support the video tag.
+                  </video>
+              </div>
+          }
+          githubUrl={"https://github.com/3-letnik-VS-2024-2025/urri-board-game-IgorPolajzer.git"}
+          />
           }/>
         </Routes>
         </div>
