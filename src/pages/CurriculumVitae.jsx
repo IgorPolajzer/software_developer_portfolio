@@ -1,7 +1,7 @@
 import React from 'react';
 import './../App.css';
 import './../css/CurriculumVitae.css';
-import CV from './../assets/Igor_Polajzer_CV_English.pdf';
+import CV from './../assets/Igor_Polajzer_ENG.pdf';
 
 function CurriculumVitae() {
     // Regular expression to check for Android or iOS mobile devices
