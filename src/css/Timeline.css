@@ -1,0 +1,18 @@
+.date{
+    margin-left: 1rem; /* 16px */
+    margin-right: 1rem; /* 16px */
+    color: #FFFFFF;
+}
+
+.title{
+    color: #FFFFFF;
+    text-shadow: 0 0 10px #FFFFFF;
+}
+
+.location{
+    color: rgba(255, 255, 255, 0.69);
+}
+
+.content{
+    color: #FFFFFF;
+}
