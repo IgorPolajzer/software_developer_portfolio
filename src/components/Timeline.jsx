@@ -45,7 +45,7 @@ function Timeline(){
         },
                 {
             date: "October 1 2022 - In progress (Estimated: September 2025)",
-            title: "Programmer Setronica(Internship) d.o.o",
+            title: "Programmer(Internship) Setronica d.o.o",
             location: "Maribor - Slovenia",
             icon: <img src={Setronica} style={{width: '85%', marginTop: 25, marginLeft: 5}} />
         },
