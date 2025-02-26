@@ -44,7 +44,7 @@ function Timeline(){
             icon: <img src={SkyLabs} style={{width: '85%', marginTop: 15, marginLeft: 4}} />
         },
                 {
-            date: "October 1 2022 - In progress (Estimated: September 2025)",
+            date: "October 1 2022 - In progress",
             title: "Programmer(Internship) Setronica d.o.o",
             location: "Maribor - Slovenia",
             icon: <img src={Setronica} style={{width: '85%', marginTop: 25, marginLeft: 5}} />
