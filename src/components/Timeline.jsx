@@ -19,13 +19,13 @@ function Timeline(){
             icon: <BirthdayIcon />,
         },
         {
-            date: "September 1 2009",
+            date: "September 1 2009 - 24 June 2018",
             title: "Primary School Cirkulane-Zavrč",
             location: "Cirkulane - Slovenia",
             icon: <OSCirkulaneZavrc />,
         },
                 {
-            date: "September 1 2018 - 24 Junij  2022",
+            date: "September 1 2018 - 24 June  2022",
             title: "Technic of mechatronics - Electrical and Computer School Ptuj",
             location: "Ptuj - Slovenia",
             icon: <SCPtujIcon/>
@@ -44,7 +44,7 @@ function Timeline(){
             icon: <img src={SkyLabs} style={{width: '85%', marginTop: 15, marginLeft: 4}} />
         },
                 {
-            date: "October 1 2022 - In progress",
+            date: "August 1 2024 - Currently working part time",
             title: "Programmer(Internship) Setronica d.o.o",
             location: "Maribor - Slovenia",
             icon: <img src={Setronica} style={{width: '85%', marginTop: 25, marginLeft: 5}} />
