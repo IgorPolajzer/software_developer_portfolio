@@ -1,7 +1,8 @@
 .skills-section {
     padding: 20px;
     text-align: center;
-        height: auto;
+    height: auto;
+    min-height: 750px;
     overflow: hidden;
 }
 
@@ -53,6 +54,10 @@
 }
 
 @media (max-width: 925px) {
+.skills-section {
+    min-height: 0px;
+}
+
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
