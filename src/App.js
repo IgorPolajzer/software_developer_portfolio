@@ -20,6 +20,7 @@ function App() {
         <div className="App">
             <Stars/>
             <NavBar/>
+            <br></br>
             <Routes>
                 <Route path="/" element={<AboutMe/>}/>
                 <Route path="/projects" element={<MyProjects/>}/>

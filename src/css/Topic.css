@@ -113,7 +113,7 @@
   }
 
   /* Media Query for screens below 925px */
-  @media (max-width: 925px) {
+  @media (max-width: 1200px) {
     /* Adjust the layout for the topic box */
     .topic-box {
       display: flex;
