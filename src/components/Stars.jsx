@@ -3,7 +3,9 @@ import { useEffect } from "react";
 const Starfield = () => {
   useEffect(() => {
     const canvas = document.getElementById("starfield");
-    const ctx = canvas.getContext("2d");
+    const ctx = canvas?.getContext("2d");
+    if (!canvas || !ctx) return;
+
 
     let stars = [];
     const layerCount = 3; // 3 layers for parallax
@@ -152,16 +154,33 @@ const Starfield = () => {
     }
 
     // Animation loop
-    function animate() {
+    // function animate() {
+    //   updateStars();
+    //   updateShootingStar();
+    //   drawStars();
+    //   drawShootingStar();
+    //   requestAnimationFrame(animate);
+    // }
+    let lastFrameTime = performance.now();
+  function animate() {
+    const now = performance.now();
+    if (now - lastFrameTime > 16) { // Ensure 60 FPS max
+      lastFrameTime = now;
       updateStars();
       updateShootingStar();
       drawStars();
       drawShootingStar();
-      requestAnimationFrame(animate);
     }
+    requestAnimationFrame(animate);
+  }
 
     // Handle resizing
-    window.addEventListener("resize", resizeCanvas);
+    // window.addEventListener("resize", resizeCanvas);
+    let resizeTimeout;
+    window.addEventListener("resize", () => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(resizeCanvas, 200);
+    });
 
     // Initialize
     resizeCanvas();

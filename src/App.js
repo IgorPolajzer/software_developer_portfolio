@@ -12,7 +12,7 @@ import MobileAppVideo from "./assets/direct4me_project/R-AID_mobilna_aplikacija_
 import Direct4MeAnimation from "./assets/direct4me_project/R-AID_projektni_video.mp4";
 import ChessVideo from "./assets/chess_project/Igor_Polajzer_chess.mp4";
 import TankTitansDemoVideo from "./assets/tanktitans_project/tank_titans_video.mp4";
-import Stars from './components/Starts'
+import Stars from './components/Stars'
 
 function App() {
   return (
