@@ -11,6 +11,16 @@
 
   }
 
+  .card-title{
+    font-size: 20px;
+    color: #FFFFFF;
+    font-weight: bold;
+    white-space: nowrap;
+    text-shadow: 0 0 10px #FFFFFF;
+    margin-bottom: 10px;
+    flex: 1;
+  }
+
   .topic-box {
     /* Reset properties outside the media query */
     display: block; /* Default display */

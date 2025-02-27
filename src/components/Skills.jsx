@@ -24,7 +24,7 @@ function Skills(props) {
     return (
         <div className="skills-section">
             <div className="topic-box-title">
-                <h1 className="title">My Skills</h1>
+                <h1 className="card-title">My Skills</h1>
                 <div className="href-to-projects-box">
                     <h2 className="subtitle">IF YOU WANT TO SEE MY SKILL'S IN ACTION TAKE A LOOK AT</h2>
                     <h2 className="subtitle">
