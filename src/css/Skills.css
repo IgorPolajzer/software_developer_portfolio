@@ -1,7 +1,8 @@
 .skills-section {
     padding: 20px;
-    height: 600px;
     text-align: center;
+        height: auto;
+    overflow: hidden;
 }
 
 .topic-box-title {
@@ -49,4 +50,44 @@
 .href-to-projects-box h2{
     margin-left: 7.5px;
     display: inline-block;
+}
+
+@media (max-width: 925px) {
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-gap: 25px;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 17.5px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.skill:hover {
+    transform: scale(1.05);
+}
+
+.skill-icon {
+    width: 25px;
+    height: 25px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill p {
+    font-size: 0.8rem;
+    margin: 0;
+}
 }

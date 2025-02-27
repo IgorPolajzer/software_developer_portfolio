@@ -21,6 +21,8 @@
 .experience-section {
     width: 100%;
     padding: 20px; /* Added padding for better spacing */
+    height: auto;
+    overflow: hidden;
 }
 
 .company-grid {
@@ -42,6 +44,13 @@
     width: 2px;
     background-color: #000;
     margin: 0 10px;
+}
+
+.company-logo {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto; /* Center the logo */
 }
 
 /* Media Query for screens below 800px */
@@ -67,11 +76,11 @@
     }
 
     .company h1 {
-        font-size: 25px; /* Adjust font size */
+        font-size: 20px; /* Adjust font size */
     }
 
     .company p {
-        font-size: 18px; /* Adjust font size */
+        font-size: 12px; /* Adjust font size */
     }
 
     .company-logo {
