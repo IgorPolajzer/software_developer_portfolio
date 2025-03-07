@@ -83,7 +83,7 @@ function App() {
                             "Domain provider": "AWS Route 53",
                             "Front end": "React"
                         }}
-                        url={"https://sync-fluencer.com"}
+                        url={"https://main.drrax851pials.amplifyapp.com/"}
                         completed={false}
                         githubUrl={"https://github.com/Autom8Software/SyncFluencer"}
                     />
