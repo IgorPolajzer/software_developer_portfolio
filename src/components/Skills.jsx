@@ -19,6 +19,7 @@ import { ReactComponent as Android } from './../assets/icons/android-icon.svg'
 import { ReactComponent as C } from './../assets/icons/c.svg'
 import { ReactComponent as FullStack } from './../assets/icons/full-stack.svg'
 import { ReactComponent as JetPackCompose} from "./../assets/icons/compose-multiplatform.svg";
+import { ReactComponent as Flutter } from './../assets/icons/flutter.svg'
 
 function Skills(props) {
     return (
@@ -128,6 +129,12 @@ function Skills(props) {
                         <JetPackCompose/>
                     </div>
                     <p>Jetpack Compose</p>
+                </div>
+                <div className="skill">
+                    <div className="skill-icon">
+                        <Flutter/>
+                    </div>
+                    <p>Flutter</p>
                 </div>
             </div>
         </div>
