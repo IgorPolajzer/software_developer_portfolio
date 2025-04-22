@@ -1,5 +1,5 @@
 .project-box {
-    height: 350px;
+    height: 90%;
     width: 100%;
     overflow: hidden;
   background-color: rgba(255, 255, 255, 0.1); /* White with 80% opacity */
@@ -17,10 +17,11 @@
 }
 
 .project-img {
-    width: 100%;  /* Ensures the image stretches to fit the container's width */
-    height: 350px; /* Ensures the image stretches to fit the container's height */
-    object-fit: cover; /* Makes sure the image covers the container while maintaining its aspect ratio */
-    object-position: top; /* Centers the image in the container */
+    width: 100%;
+    height: 100%; /* Maintains aspect ratio */
+    object-fit: contain; /* Keeps image undistorted */
+    object-position: right; /* Centers the image */
+    display: block; /* Prevents unexpected inline spacing */
 }
 
 .project-data-box {

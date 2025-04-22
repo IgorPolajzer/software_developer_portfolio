@@ -9,7 +9,7 @@ function Experience() {
     return (
         <div className="experience-section">
             <div className="topic-box-title">
-                <h1 className="card-title">Work Experience</h1>
+                <h1 className="topic-card-title">Work Experience</h1>
                 <h2 className="subtitle">COMPANIES I WORKED AT</h2>
             </div>
             <div className="company-grid">

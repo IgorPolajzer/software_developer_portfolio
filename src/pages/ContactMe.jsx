@@ -29,7 +29,7 @@ function ContactMe(){
                 <div className="card">
                     <div className="card-body">
                         <div className="title-linkedin-container">
-                            <h1 className="card-title">
+                            <h1 className="topic-card-title">
                                 Contact me:
                             </h1>
                             <div className="linked-in-caption-container">

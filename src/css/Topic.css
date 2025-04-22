@@ -1,18 +1,17 @@
   .topic-box{
-    height: 95%;
+    height: 10vh;
     width: 90%;
     min-height: 750px;
-    background-color: rgba(255, 255, 255, 0.05); /* White with 80% opacity */
+    background-color: rgba(255, 255, 255, 0.025); /* White with 80% opacity */
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 2.5%;
     border-radius: 5%;
     box-shadow: 8.0px 16.0px 16.0px hsl(0deg 0% 0% / 0.25);
     overflow-y: auto;
-
   }
 
-  .card-title{
+  .topic-card-title{
     font-size: 20px;
     color: #FFFFFF;
     font-weight: bold;

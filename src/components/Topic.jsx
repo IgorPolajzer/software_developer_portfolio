@@ -44,7 +44,7 @@ function Topic(props) {
     content = (
         <>
           <div className="topic-box-title">
-            <h1 className="card-title">{props.title}</h1>
+            <h1 className="topic-card-title">{props.title}</h1>
             <h2 className="subtitle">{props.subtitle}</h2>
           </div>
           {props.image && (

@@ -42,7 +42,7 @@ function ProjectView(props) {
                                     <div className="col-md-4 mb-3" key={key}>
                                         <div className="card">
                                             <div className="card-body">
-                                                <h5 className="card-title">{key}</h5>
+                                                <h5 className="topic-card-title">{key}</h5>
                                                 <p className="card-text">{value}</p>
                                             </div>
                                         </div>
