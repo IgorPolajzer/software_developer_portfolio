@@ -47,14 +47,15 @@ function Topic(props) {
             <h1 className="topic-card-title">{props.title}</h1>
             <h2 className="subtitle">{props.subtitle}</h2>
           </div>
-          {props.image && (
-              <div className="topic-box-image-box">
-                <img src={props.image} alt="profile_picture" className="topic-box-image"/>
-              </div>
-          )}
-          <div className={props.image ? "topic-box-w-image-content-box" : "topic-box-content-box"}>
-            <p className="text">{props.text}</p>
-          </div>
+
+            {props.image && (
+                <div className="topic-box-image-box">
+                  <img src={props.image} alt="profile_picture" className="topic-box-image"/>
+                </div>
+            )}
+            <div className={props.image ? "topic-box-w-image-content-box" : "topic-box-content-box"}>
+              <p className="text">{props.text}</p>
+            </div>
         </>
     );
   }

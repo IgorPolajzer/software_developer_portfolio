@@ -1,8 +1,6 @@
 import './../App.css';
 import Topic from "../components/Topic";
-// import ProfileImg from "../assets/profile_picture_placeholder.png";
 import ProfileImg from "../assets/profile_image.jpg";
-import HtmlBrackets from "../assets/html_brackets_logo.png";
 import Skills from "../components/Skills";
 import Experience from "../components/Experience";
 import Timeline from "../components/Timeline";
