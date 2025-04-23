@@ -1,7 +1,7 @@
   .topic-box{
-    height: 10vh;
     width: 90%;
-    min-height: 750px;
+    min-height: 80vh;
+    max-height: 80vh;
     background-color: rgba(255, 255, 255, 0.025); /* White with 80% opacity */
     margin-left: auto;
     margin-right: auto;
@@ -12,7 +12,7 @@
   }
 
   .topic-card-title{
-    font-size: 20px;
+    font-size: 20%;
     color: #FFFFFF;
     font-weight: bold;
     white-space: nowrap;
@@ -21,8 +21,15 @@
     flex: 1;
   }
 
+  .container {
+    height: 100%;
+    width: 100%;
+    margin-top: 5%;
+    align-content: space-around;
+  }
+
+
   .topic-box {
-    /* Reset properties outside the media query */
     display: block; /* Default display */
     flex-direction: initial; /* Reset flex direction */
     align-items: initial; /* Reset align-items */
@@ -37,11 +44,12 @@
   .topic-box-w-image-content-box {
     float: left; /* Restore float */
     width: 50%; /* Restore default width */
-    height: 65%; /* Restore height */
+    height: 100%; /* Restore height */
     margin: initial; /* Reset margins */
     padding: initial; /* Reset padding */
     display: block; /* Restore default display */
     flex-direction: initial; /* Reset flex direction */
+    align-items: center;
   }
 
 
@@ -52,13 +60,11 @@
   }
 
   .topic-box-title h1{
-    /*font-weight: bold;*/
     font-size: 50px;
   }
 
   .topic-box-title h2{
     font-style: italic;
-    /*color: #363636;*/
   }
 
   .topic-box-image-box{
@@ -70,21 +76,22 @@
   }
 
   .topic-box-image {
-    width: 400px; /* Set a square size */
-    height: 400px;
+    width: 55%; /* Set a square size */
+    height: 55%;
     border-radius: 50%;
     object-fit: cover; /* Ensures the image fills the circle without distortion */
-    border: 5px solid #bebebe;
+    border: 5px solid #FFFFFF;
+;
   }
 
   .topic-box-w-image-content-box{
     float: right;
     text-align: center;
-    padding: 5% 0;
+    padding-top: 10%;
     display: flex;
     margin-right: 8%;
     width: 40%;
-    height: 40%;
+    height: 100%;
   }
 
   .topic-box-w-image-content-box p{
