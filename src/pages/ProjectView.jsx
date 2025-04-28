@@ -5,7 +5,7 @@ import { ReactComponent as GithubLogo } from './../assets/icons/github-mark.svg'
 function ProjectView(props) {
     return (
         <div className="project-section">
-            <div className="container mt-4">
+            <div className>
                 <div className="card">
                     <div className="card-body">
                         <div className="title-github-container">

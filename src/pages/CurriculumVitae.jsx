@@ -10,7 +10,7 @@ function CurriculumVitae() {
 
     return (
         <div className="cv-section">
-            <div className="container">
+            <div>
                 <div className="card">
                     <div className="card-body" style={{color: "#000000"}}>
                         <h1 className="card-title">Curriculum Vitae</h1>
@@ -44,7 +44,7 @@ function CurriculumVitae() {
                 </div>
             </div>
             <br></br>
-            <div className="container">
+            <div>
                 <div className="card">
                     <div className="card-body">
                         <h1 className="card-title">Courses</h1>
