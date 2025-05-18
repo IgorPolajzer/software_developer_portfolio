@@ -17,10 +17,9 @@ import Stars from './components/Stars'
 function App() {
     return (
         <Router>
+            <NavBar/>
+            <Stars/>
             <div className="App">
-                <NavBar/>
-                <Stars/>
-                <br></br>
                 <Routes>
                     <Route path="/" element={<AboutMe/>}/>
                     <Route path="/projects" element={<MyProjects/>}/>
@@ -152,9 +151,10 @@ function App() {
                     />
                     }/>
                 </Routes>
-            </div>
+                </div>
         </Router>
-    );
+)
+    ;
 }
 
 export default App;

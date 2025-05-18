@@ -9,6 +9,7 @@
   overflow-y: auto;
   overflow-x: hidden;
   background: linear-gradient(0deg, #e0e1dd 5%, #1b263b 100%);
+  padding-top: 9%;
 }
 
 h1,
@@ -28,33 +29,4 @@ p,
   color: rgba(134, 193, 236, 0.89);
 }
 
-.aboutme-section,
-.myprojects-section,
-.contactme-section,
-.project-section{
-  margin-top: 8%; /*NavBar adjustment*/
-  height: 83.4vh; /*NavBar adjustment*/
-  height: 83.4svh;
-  width: 100vw;
-}
-
-.cv-section{
-  padding-top: 125px;
-  height: 98.5vh; /*NavBar adjustment*/
-  height: 98.5svh;
-  width: 100vw;
-}
-
-@media(max-width:1000px){
-    .aboutme-section,
-    .myprojects-section,
-    .contactme-section,
-    .project-section,
-    .cv-section{
-      margin-top: 8%; /*NavBar adjustment*/
-      height: 83.4vh; /*NavBar adjustment*/
-      height: 83.4svh;
-      width: 100vw;
-    }
-}
 
