@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import './../css/NavBar.css';
-import './../App.css';
 import Navbar from 'react-bootstrap/Navbar';
 import { ReactComponent as HamburgerIcon } from './../assets/hamburger_icon.svg';
 import { ReactComponent as CloseIcon } from './../assets/close_icon.svg';

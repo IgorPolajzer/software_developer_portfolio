@@ -2,7 +2,7 @@
     position: fixed;
     width: 100%;
     top: 0;
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.00);
     min-height: 125px;
     display: flex;
     align-items: center;
@@ -19,6 +19,11 @@
     flex: 1;
   }
 
+  .title {
+    font-weight: bold;
+    font-size: 18px;
+  }
+
   .nav-links {
     display: flex;
     gap: 20px;
@@ -29,7 +34,8 @@
     color: #dbdbdb;
     text-decoration: none;
     padding-left: 20px;
-    font-size: 20px;
+    font-size: 22px;
+    font-weight: bold;
   }
 
 
@@ -50,10 +56,9 @@
 
   /* Mobile navigation styles */
   @media (max-width: 1000px) {
-
-    .nav-bar{
-      position: sticky;
-      top: 0;
+    .nav-bar {
+      padding-bottom: 30px;
+      min-height: 100px;
     }
 
     .nav-links {
@@ -63,12 +68,11 @@
     .hamburger-icon {
       display: block;
       padding-left: 10px;
-      /*font-size: 30px; !* Size the icon appropriately for mobile *!*/
     }
 
     .nav-bar .title {
-      flex: 1; /* Allow title to take remaining space */
-      text-align: center; /* Center title for mobile */
+      flex: 1;
+      text-align: center;
     }
 
     .nav-links-mobile {
@@ -79,7 +83,7 @@
       top: 125px;
       left: 0;
       width: 100%;
-      background: rgba(13, 27, 42, 0.4);
+      background: rgba(13, 27, 42, 0.0);
       list-style: none;
       padding: 0;
       margin: 0;

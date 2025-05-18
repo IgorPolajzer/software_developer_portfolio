@@ -151,10 +151,9 @@ function App() {
                     />
                     }/>
                 </Routes>
-                </div>
+            </div>
         </Router>
-)
-    ;
+    );
 }
 
 export default App;
