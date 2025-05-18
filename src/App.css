@@ -12,11 +12,7 @@
   padding-top: 9%;
 }
 
-h1,
-h2,
-p,
-.nav-link,
-.logo{
+*{
   font-family: 'Poppins'
 }
 

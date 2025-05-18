@@ -18,21 +18,10 @@ function NavBar() {
         setIsOpened(false); // Close the menu if the screen width is above 1000px
       }
     };
-
-    // Add the resize event listener
-    window.addEventListener('resize', handleResize);
-
-    // Initial check
-    handleResize();
-
-    // Clean up the event listener on component unmount
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
   }, []);
 
   return (
-      <Navbar expand="lg" className="nav-bar" fixed="top">
+      <Navbar expand="lg" className={menuOpened ? 'nav-bar-mobile' : "nav-bar"} fixed="top">
 
         <div className="title">Igor Polajžer - Software developer</div>
 
