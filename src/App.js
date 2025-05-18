@@ -18,8 +18,8 @@ function App() {
     return (
         <Router>
             <div className="App">
-                <Stars/>
                 <NavBar/>
+                <Stars/>
                 <br></br>
                 <Routes>
                     <Route path="/" element={<AboutMe/>}/>
