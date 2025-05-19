@@ -26,4 +26,10 @@
   color: rgba(134, 193, 236, 0.89);
 }
 
+@media (max-width: 1000px) {
+  .App {
+      padding-top: 22%;
+      padding-bottom: 22%;
+  }
+}
 
