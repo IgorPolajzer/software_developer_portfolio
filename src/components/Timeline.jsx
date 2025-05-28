@@ -8,6 +8,7 @@ import { ReactComponent as SCPtujIcon } from '../assets/icons/scptuj-icon.svg'
 import { ReactComponent as FERI } from "../assets/icons/university.svg";
 import SkyLabs from "../assets/skylabs_logo.png";
 import Setronica from "../assets/setronica_logo.png"
+import Tridens from "../assets/Tridens.png"
 
 
 function Timeline(){
@@ -44,11 +45,17 @@ function Timeline(){
             icon: <img src={SkyLabs} style={{width: '85%', marginTop: 15, marginLeft: 4}} />
         },
                 {
-            date: "August 1 2024 - Currently working part time",
+            date: "August 1 2024 - June 28 2025",
             title: "Programmer(Internship) Setronica d.o.o",
-            location: "Maribor - Slovenia",
+            location: "Ljubljana(remote) - Slovenia",
             icon: <img src={Setronica} style={{width: '85%', marginTop: 25, marginLeft: 5}} />
         },
+        {
+            date: "March 24 2025 - Present",
+            title: "Software developer Tridens d.o.o",
+            location: "Maribor - Slovenia",
+            icon: <img src={Tridens} style={{width: '85%', marginTop: 25, marginLeft: 5}} />
+        }
     ]
 
     return (
