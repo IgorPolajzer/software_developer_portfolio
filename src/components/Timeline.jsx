@@ -45,7 +45,7 @@ function Timeline(){
             icon: <img src={SkyLabs} style={{width: '85%', marginTop: 15, marginLeft: 4}} />
         },
                 {
-            date: "August 1 2024 - June 28 2025",
+            date: "August 1 2024 - June 1 2025",
             title: "Programmer(Internship) Setronica d.o.o",
             location: "Ljubljana(remote) - Slovenia",
             icon: <img src={Setronica} style={{width: '85%', marginTop: 25, marginLeft: 5}} />

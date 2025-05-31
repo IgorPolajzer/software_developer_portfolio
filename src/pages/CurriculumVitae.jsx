@@ -1,7 +1,7 @@
 import React from 'react';
 import './../App.css';
 import './../css/CurriculumVitae.css';
-import CV from './../assets/Igor_Polajzer_ENG.pdf';
+import CV from './../assets/Igor_Polajzer_CV.pdf';
 import Courses from './../assets/Course_certificates.pdf';
 
 function CurriculumVitae() {
