@@ -12,6 +12,7 @@ import MobileAppVideo from "./assets/direct4me_project/R-AID_mobilna_aplikacija_
 import Direct4MeAnimation from "./assets/direct4me_project/R-AID_projektni_video.mp4";
 import ChessVideo from "./assets/chess_project/Igor_Polajzer_chess.mp4";
 import TankTitansDemoVideo from "./assets/tanktitans_project/tank_titans_video.mp4";
+import MorphDemo from "./assets/morph/Demonstracija_Morph.mov"
 import Stars from './components/Stars'
 
 function App() {
@@ -72,19 +73,34 @@ function App() {
                         completed={false}
                         githubUrl={"https://github.com/IgorPolajzer/software_developer_portfolio"}
                     />}/>
-                    <Route path="/projects/sync-fluencer-project" element={
+                    <Route path="/projects/morph" element={
                         <ProjectView
-                            title="SyncFluencer"
-                            description="SyncFluencer is a powerful platform designed to streamline content creation for influencers and digital marketers. It enables users to effortlessly publish short-term content across multiple social media platforms simultaneously. By integrating the advanced capabilities of the OpenAI API, SyncFluencer goes beyond just posting—it generates optimized tags and tailored descriptions for each platform, ensuring maximum engagement and reach. Simply provide a brief description of your content, and let SyncFluencer do the rest, making social media management more efficient and impactful."
+                            title="Morph"
+                            description="Morph is a cross-platform mobile application I developed as my final diploma thesis for my Bachelor’s degree in Computer Science and Information Technology Engineering (FERI, University of Maribor). The app leverages large language models (LLMs) and gamification to generate personalized self-improvement plans across three habit categories: physical, mental, and general.
+
+                            Built with Flutter and Firebase, Morph includes user authentication, real-time cloud data synchronization, and a dynamic progress-tracking system that rewards consistency. The application features AI-driven plan generation, a customizable calendar, and visually engaging growth metaphors (such as a tree avatar that grows as users progress).
+
+                            Morph is still in active development, with plans to release it on both the Google Play Store and Apple App Store. This project demonstrates not only my skills in mobile development and AI integration but also my ability to deliver a complete full-stack solution – from concept and design to implementation, testing, and future deployment."
                             technologies={{
-                                "Hosting": "AWS Amplify",
-                                "User authentication": "AWS Cognito",
-                                "Domain provider": "AWS Route 53",
-                                "Front end": "React"
+                                "Frontend / Mobile App": "Flutter, Dart",
+                                "Backend / Cloud": "Firebase (Authentication, Firestore, Cloud Functions)",
+                                "AI / Machine Learning": "Awan LLM",
+                                "State Management": "Provider / Riverpod",
+                                "UI / UX": "Figma",
+                                "Deployment": "Planned for Google Play Store and Apple App Store",
+                                "Version Control": "Git, GitHub"
                             }}
-                            url={"https://main.drrax851pials.amplifyapp.com/"}
+                            custom={
+                                <div>
+                                    <h3 className="subtitle">Project demo:</h3>
+                                    <video width={"100%"} height={"100%"} controls>
+                                        <source src={MorphDemo} type="video/mp4"/>
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            }
                             completed={false}
-                            githubUrl={"https://github.com/Autom8Software/SyncFluencer"}
+                            githubUrl={"https://github.com/IgorPolajzer/Morph"}
                         />
                     }/>
                     <Route path="/projects/tank-titans" element={
@@ -112,7 +128,7 @@ function App() {
                         title={"Chess"}
                         description={"Chess is a simple game built in Java with LibGDX, allowing two players to play on a single computer. It features a clean design and smooth gameplay, bringing the classic game of chess to life."}
                         technologies={{
-                            "language": "Java",
+                            "Language": "Java",
                             "Framework": "LibGdx"
                         }}
                         completed={true}

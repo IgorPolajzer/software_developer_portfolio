@@ -3,7 +3,7 @@ import '../css/MyProjects.css'
 import Project from './../components/Project';
 import Direct4Me from './../assets/direct4me_project.png';
 import Portfolio from './../assets/portfolio_project.png'
-import SyncFluencer from './../assets/syncfluencer-project.png'
+import Morph from '../assets/morph/morph_project_thumbnail.jpg'
 import TankTitans from '../assets/tanktitans_project/tank_titans_project.png';
 import Chess from '../assets/chess_project/Chess.png'
 import PatrikPivkoWebsite from '../assets/patrik_pivko_website/patrik_pivko_website.png'
@@ -31,10 +31,10 @@ function MyProjects() {
                      title={"Patrik Pivko s.p. - spletna stran"}
                      status={"Completed"}
                      navigation={"patrik-pivko-website"}/>
-            <Project image={SyncFluencer}
-                     title={"SyncFluencer - social media tool"}
+            <Project image={Morph}
+                     title={"Morph – AI-Powered Personal Growth Mobile App"}
                      status={"In progress"}
-                     navigation={"sync-fluencer-project"}/>
+                     navigation={"morph"}/>
         </div>
     )
 }

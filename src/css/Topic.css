@@ -10,20 +10,20 @@
     overflow-y: auto;
   }
 
-  .topic-card-title{
-    font-size: 20%;
-    color: #FFFFFF;
+.topic-card-title {
+    font-size: 1rem;
+    color: #120a0a;
     font-weight: bold;
-    white-space: nowrap;
-    text-shadow: 0 0 10px #FFFFFF;
     margin-bottom: 10px;
-    flex: 1;
-  }
+    white-space: normal;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+}
 
   .container {
     height: 100%;
     width: 100%;
     margin-top: 5%;
+    align-content: space-around;
     align-content: space-around;
   }
 
