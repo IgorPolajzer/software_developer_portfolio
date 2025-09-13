@@ -1,6 +1,6 @@
 import './../App.css';
 import Topic from "../components/Topic";
-import ProfileImg from "../assets/profile_image.jpg";
+import ProfileImg from "../assets/ip-tridens-white.jpg";
 import Skills from "../components/Skills";
 import Experience from "../components/Experience";
 import Timeline from "../components/Timeline";
