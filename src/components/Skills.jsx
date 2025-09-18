@@ -20,6 +20,8 @@ import { ReactComponent as C } from './../assets/icons/c.svg'
 import { ReactComponent as FullStack } from './../assets/icons/full-stack.svg'
 import { ReactComponent as JetPackCompose} from "./../assets/icons/compose-multiplatform.svg";
 import { ReactComponent as Flutter } from './../assets/icons/flutter.svg'
+import { ReactComponent as PostgrqSql } from './../assets/icons/postgresql.svg'
+import { ReactComponent as SpringBoot } from './../assets/icons/spring-boot.svg'
 
 function Skills(props) {
     return (
@@ -72,6 +74,12 @@ function Skills(props) {
                 </div>
                 <div className="skill">
                     <div className="skill-icon">
+                        <PostgrqSql/>
+                    </div>
+                    <p>postgreSql</p>
+                </div>
+                <div className="skill">
+                    <div className="skill-icon">
                         <FullStack/>
                     </div>
                     <p>Web Stacks (MERN, LAMP)</p>
@@ -111,6 +119,12 @@ function Skills(props) {
                         <Java height={50}/>
                     </div>
                     <p>Java</p>
+                </div>
+                <div className="skill">
+                    <div className="skill-icon">
+                        <SpringBoot/>
+                    </div>
+                    <p>Spring Boot</p>
                 </div>
                 <div className="skill">
                     <div className="skill-icon">

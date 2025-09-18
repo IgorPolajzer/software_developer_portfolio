@@ -10,9 +10,12 @@ const experiences = [
     {
         company: "Tridens d.o.o",
         role: "Software Developer",
-        timeframe: "March 24 2025 - Present",
+        timeframe: "March 24 2025 - Current",
         logo: TridensLogo,
-        description: `At Tridens d.o.o, I worked on integrating Apache Thrift services into existing Spring Boot projects. My tasks included generating Thrift interfaces, implementing service handlers, and enabling efficient RPC communication between microservices. I also contributed to extending and maintaining backend functionalities, and wrote both integration and unit tests to ensure code quality and system reliability.`
+        description: `At Tridens d.o.o, I have been working as a Java developer, contributing to the integration and development of
+        backend systems. My responsibilities include collaborating on the design and implementation of microservices,
+        supporting RPC communication, and maintaining high-quality, reliable code through testing and continuous
+        improvement.`
     },
     {
         company: "Setronica d.o.o",

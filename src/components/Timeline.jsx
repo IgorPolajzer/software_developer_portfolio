@@ -31,14 +31,7 @@ function Timeline(){
             location: "Ptuj - Slovenia",
             icon: <SCPtujIcon/>
         },
-                {
-            date: "October 1 2022 - In progress (Estimated: September 2025)",
-            title: "BSc of Computer Science and Information Technology\n" +
-                "Engineering The Faculty of Electrical Engineering and Computer",
-            location: "Maribor - Slovenia",
-            icon: <FERI/>
-        },
-                        {
+        {
             date: "August 1 2023 - 31 September  2023",
             title: "Software engineer(Internship) Skylabs d.o.o",
             location: "Maribor - Slovenia",
@@ -51,10 +44,22 @@ function Timeline(){
             icon: <img src={Setronica} style={{width: '85%', marginTop: 25, marginLeft: 5}} />
         },
         {
-            date: "March 24 2025 - Present",
+            date: "March 24 2025 - Ongoing",
             title: "Software developer Tridens d.o.o",
             location: "Maribor - Slovenia",
             icon: <img src={Tridens} style={{width: '85%', marginTop: 25, marginLeft: 5}} />
+        },
+        {
+            date: "October 1 2022 - August 28 2025",
+            title: "BSc of Computer Science and Information Technology Engineering - Faculty of Electrical Engineering and Computer",
+            location: "Maribor - Slovenia",
+            icon: <FERI/>
+        },
+        {
+            date: "October 1 2025 - Ongoing",
+            title: "MSc of Computer Science and Information Technology Engineering - Faculty of Electrical Engineering and Computer",
+            location: "Maribor - Slovenia",
+            icon: <FERI/>
         }
     ]
 
