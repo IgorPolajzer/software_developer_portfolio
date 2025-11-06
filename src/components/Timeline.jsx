@@ -1,92 +1,58 @@
-import "./../css/Timeline.css"
-import React from 'react'
-import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
-import 'react-vertical-timeline-component/style.min.css';
-import { ReactComponent as BirthdayIcon } from '../assets/icons/birthday-icon.svg'
-import { ReactComponent as OSCirkulaneZavrc } from '../assets/icons/os-cirkulane-zavrc-icon.svg'
-import { ReactComponent as SCPtujIcon } from '../assets/icons/scptuj-icon.svg'
-import { ReactComponent as FERI } from "../assets/icons/university.svg";
-import SkyLabs from "../assets/skylabs_logo.png";
-import Setronica from "../assets/setronica_logo.png"
-import Tridens from "../assets/Tridens.png"
+import React from "react";
+import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
+import "react-vertical-timeline-component/style.min.css";
 
-
-function Timeline(){
-    const timelineItems = [
-        {
-            date: "July 22 2003",
-            title: "Birth",
-            location: "Maribor - Slovenia",
-            icon: <BirthdayIcon />,
-        },
-        {
-            date: "September 1 2009 - 24 June 2018",
-            title: "Primary School Cirkulane-Zavrč",
-            location: "Cirkulane - Slovenia",
-            icon: <OSCirkulaneZavrc />,
-        },
-                {
-            date: "September 1 2018 - 24 June  2022",
-            title: "Technic of mechatronics - Electrical and Computer School Ptuj",
-            location: "Ptuj - Slovenia",
-            icon: <SCPtujIcon/>
-        },
-        {
-            date: "August 1 2023 - 31 September  2023",
-            title: "Software engineer(Internship) Skylabs d.o.o",
-            location: "Maribor - Slovenia",
-            icon: <img src={SkyLabs} style={{width: '85%', marginTop: 15, marginLeft: 4}} />
-        },
-                {
-            date: "August 1 2024 - June 1 2025",
-            title: "Programmer(Internship) Setronica d.o.o",
-            location: "Ljubljana(remote) - Slovenia",
-            icon: <img src={Setronica} style={{width: '85%', marginTop: 25, marginLeft: 5}} />
-        },
-        {
-            date: "March 24 2025 - Ongoing",
-            title: "Software developer Tridens d.o.o",
-            location: "Maribor - Slovenia",
-            icon: <img src={Tridens} style={{width: '85%', marginTop: 25, marginLeft: 5}} />
-        },
-        {
-            date: "October 1 2022 - August 28 2025",
-            title: "BSc of Computer Science and Information Technology Engineering - Faculty of Electrical Engineering and Computer",
-            location: "Maribor - Slovenia",
-            icon: <FERI/>
-        },
-        {
-            date: "October 1 2025 - Ongoing",
-            title: "MSc of Computer Science and Information Technology Engineering - Faculty of Electrical Engineering and Computer",
-            location: "Maribor - Slovenia",
-            icon: <FERI/>
-        }
-    ]
-
-    return (
-        <>
-            <h1>Timeline</h1>
-            <div className="container">
-
-                    <VerticalTimeline>
-                        {timelineItems.map((item, index) => (
-                            <VerticalTimelineElement
-                            key={index}
-                            date={<div class={"date"}>{item.date}</div>}
-                            contentStyle={{background: '#0D1B2A66'}}
-                            contentArrowStyle={{background: "transparent", color: "#FFFFFF", marginRight:"4px"}}
-                            iconStyle={{ background: '#ddd8da'}}
-                            icon={item.icon}
-                            >
-                                <h3 class={"title"}>{item.title}</h3>
-                                <h4 class={"location"}>{item.location}</h4>
-                                <p class={"content"}>{item.content}</p>
-                            </VerticalTimelineElement>
-                        ))}
-                    </VerticalTimeline>
-            </div>
-        </>
-    )
+function Timeline({ items = [] }) {
+  return (
+    <>
+      <h1 style={{ color: "var(--color-text-base)", textAlign: "center", marginBottom: "2rem" }}>
+        Timeline
+      </h1>
+      <div style={{ maxWidth: 900, margin: "0 auto", padding: "2rem" }}>
+        <VerticalTimeline>
+          {items.map((item, index) => (
+            <VerticalTimelineElement
+              key={index}
+              date={<div style={{ color: "var(--color-secondary)" }}>{item.date}</div>}
+              contentStyle={{
+                background: item.background || "var(--color-bg-primary)",
+                color: "var(--color-text-base)",
+                borderRadius: "8px",
+                padding: "1.5rem",
+                boxShadow: "0 0 15px rgba(0,0,0,0.2)",
+                transition: "background 0.3s, color 0.3s, box-shadow 0.3s",
+              }}
+              contentArrowStyle={{ borderRight: `7px solid ${item.background || "var(--color-bg-primary)"}` }}
+              iconStyle={{ background:"var(--stars-color)" }}
+              icon={
+                item.iconPath ? (
+                  <img
+                    src={item.iconPath}
+                    style={{
+                      width: item.iconWidth || "85%",
+                      marginTop: item.iconMarginTop || 15,
+                      marginLeft: item.iconMarginLeft || 0,
+                      borderRadius: "50%",
+                    }}
+                  />
+                ) : null
+              }
+            >
+              <h3 style={{ fontSize: "1.25rem", fontWeight: 600, marginBottom: "0.25rem" }}>
+                {item.title}
+              </h3>
+              <h4 style={{ fontSize: "1rem", fontWeight: 400, marginBottom: "0.5rem" }}>
+                {item.location}
+              </h4>
+              {item.content && (
+                <p style={{ fontSize: "0.95rem", lineHeight: 1.5 }}>{item.content}</p>
+              )}
+            </VerticalTimelineElement>
+          ))}
+        </VerticalTimeline>
+      </div>
+    </>
+  );
 }
 
 export default Timeline;

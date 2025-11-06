@@ -6,54 +6,56 @@ const Starfield = () => {
     const ctx = canvas?.getContext("2d");
     if (!canvas || !ctx) return;
 
-
     let stars = [];
-    const layerCount = 3; // 3 layers for parallax
-    const speeds = [0.05, 0.1, 0.2]; // Slower speeds for distant stars
-    const baseStarCount = 50; // Base count of stars per layer
+    const layerCount = 3;
+    const speeds = [0.05, 0.1, 0.2];
+    const baseStarCount = 50;
     let shootingStar = null;
 
-    // Generate a random gray color for stars
-    function getRandomGrayColor() {
-      const grayValue = Math.floor(Math.random() * 256);
-      return `rgb(${grayValue}, ${grayValue}, ${grayValue})`;
-    }
+    // Get Tailwind theme colors dynamically
+    const getCSSVar = (name) =>
+      getComputedStyle(document.documentElement).getPropertyValue(name).trim();
 
-    // Resize the canvas
+  const getThemeColors = () => ({
+    primary: getCSSVar("--color-primary") || "#0a1428",
+    secondary: getCSSVar("--color-secondary") || "#000000",
+    textBase: getCSSVar("--color-text-base") || "#ffffff",
+    bgPrimary: getCSSVar("--color-bg-primary") || "#0a1428",
+  });
+
+    // Resize canvas
     function resizeCanvas() {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
-      createStars(); // Recreate stars based on new dimensions
+      createStars();
     }
 
-    // Create the starfield
+    // Create stars
     function createStars() {
       stars = [];
-      const scalingFactor = Math.max(canvas.width, canvas.height) / 1000; // Scale star count
+      const scalingFactor = Math.max(canvas.width, canvas.height) / 1000;
       for (let i = 0; i < layerCount; i++) {
         const starCount = Math.floor(baseStarCount * scalingFactor * (i + 1));
         for (let j = 0; j < starCount; j++) {
           stars.push({
             x: Math.random() * canvas.width,
             y: Math.random() * canvas.height,
-            size: Math.random() * (i + 1) + 0.5, // Larger stars for closer layers
+            size: Math.random() * (i + 1) + 0.5,
             speed: speeds[i],
             opacity: Math.random(),
-            baseOpacity: Math.random() * 0.5 + 0.5, // Base opacity for twinkling
-            layer: i, // Track which layer the star belongs to
+            baseOpacity: Math.random() * 0.5 + 0.5,
+            layer: i,
           });
         }
       }
     }
 
-    // Update star positions and simulate twinkling
+    // Update stars
     function updateStars() {
       stars.forEach((star) => {
-        star.y -= star.speed; // All stars move upward
+        star.y -= star.speed;
         star.opacity =
-          star.baseOpacity + Math.sin(Date.now() * 0.001 * star.speed) * 0.3; // Smooth twinkle
-
-        // Reset star position when it goes off-screen
+          star.baseOpacity + Math.sin(Date.now() * 0.001 * star.speed) * 0.3;
         if (star.y < 0) {
           star.y = canvas.height;
           star.x = Math.random() * canvas.width;
@@ -61,58 +63,56 @@ const Starfield = () => {
       });
     }
 
-    // Draw the stars
+    // Draw stars and background
     function drawStars() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
+      const colors = getThemeColors();
 
-      // Add a dark radial blur gradient background
       const gradient = ctx.createRadialGradient(
         canvas.width / 2,
         canvas.height / 2,
-        canvas.width / 8, // Start small for a blur effect
+        canvas.width / 8,
         canvas.width / 2,
         canvas.height / 2,
-        canvas.width // Expand to the edges
+        canvas.width
       );
-      gradient.addColorStop(0, "rgba(10, 20, 40, 1)"); // Deep dark blue at the center
-      gradient.addColorStop(1, "rgba(0, 0, 0, 1)"); // Black at the edges
+      gradient.addColorStop(0, colors.primary);
+      gradient.addColorStop(1, colors.bgPrimary);
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-      // Draw stars with parallax effect
+      ctx.fillStyle = colors.textBase;
       stars.forEach((star) => {
-        ctx.fillStyle = `rgba(255, 255, 255, ${star.opacity})`;
+        ctx.globalAlpha = star.opacity;
         ctx.fillRect(star.x, star.y, star.size, star.size);
       });
+      ctx.globalAlpha = 1;
     }
 
-    // Initialize a shooting star
+    // Shooting star
     function createShootingStar() {
       const startX = Math.random() * canvas.width;
       const startY = Math.random() * canvas.height;
-      const angle = Math.random() * Math.PI * 2; // Random direction
-      const length = Math.random() * 300 + 100; // Random trail length
+      const angle = Math.random() * Math.PI * 2;
+      const length = Math.random() * 300 + 100;
       const speed = Math.random() * 4 + 2;
 
       shootingStar = {
         x: startX,
         y: startY,
-        length: length,
-        speed: speed,
+        length,
+        speed,
         opacity: 1,
         dx: Math.cos(angle) * speed,
         dy: Math.sin(angle) * speed,
       };
 
-      // Schedule the next shooting star (20–40 seconds for rare appearance)
       const nextAppearance = Math.random() * 20000 + 20000;
       setTimeout(createShootingStar, nextAppearance);
     }
 
-    // Update shooting star position
     function updateShootingStar() {
       if (!shootingStar) return;
-
       shootingStar.x += shootingStar.dx;
       shootingStar.y += shootingStar.dy;
       shootingStar.opacity -= 0.01;
@@ -124,22 +124,26 @@ const Starfield = () => {
         shootingStar.y < 0 ||
         shootingStar.y > canvas.height
       ) {
-        shootingStar = null; // Remove shooting star
+        shootingStar = null;
       }
     }
 
-    // Draw the shooting star
     function drawShootingStar() {
       if (!shootingStar) return;
+      const colors = getThemeColors();
 
+      // Use textBase color for shooting star with opacity
       const gradient = ctx.createLinearGradient(
         shootingStar.x,
         shootingStar.y,
         shootingStar.x - shootingStar.dx * shootingStar.length,
         shootingStar.y - shootingStar.dy * shootingStar.length
       );
-      gradient.addColorStop(0, `rgba(255, 255, 255, ${shootingStar.opacity})`);
-      gradient.addColorStop(1, `rgba(255, 255, 255, 0)`);
+      gradient.addColorStop(
+        0,
+        `rgba(${hexToRgb(colors.textBase)}, ${shootingStar.opacity})`
+      );
+      gradient.addColorStop(1, `rgba(${hexToRgb(colors.textBase)}, 0)`);
 
       ctx.beginPath();
       ctx.strokeStyle = gradient;
@@ -153,48 +157,51 @@ const Starfield = () => {
       ctx.closePath();
     }
 
-    // Animation loop
-    // function animate() {
-    //   updateStars();
-    //   updateShootingStar();
-    //   drawStars();
-    //   drawShootingStar();
-    //   requestAnimationFrame(animate);
-    // }
-    let lastFrameTime = performance.now();
-  function animate() {
-    const now = performance.now();
-    if (now - lastFrameTime > 16) { // Ensure 60 FPS max
-      lastFrameTime = now;
-      updateStars();
-      updateShootingStar();
-      drawStars();
-      drawShootingStar();
+    // Convert hex color to "r,g,b" string for rgba
+    function hexToRgb(hex) {
+      let c = hex.replace("#", "");
+      if (c.length === 3)
+        c = c[0] + c[0] + c[1] + c[1] + c[2] + c[2];
+      const num = parseInt(c, 16);
+      return `${(num >> 16) & 255}, ${(num >> 8) & 255}, ${num & 255}`;
     }
-    requestAnimationFrame(animate);
-  }
 
-    // Handle resizing
-    // window.addEventListener("resize", resizeCanvas);
+    // Animate
+    let lastFrameTime = performance.now();
+    function animate() {
+      const now = performance.now();
+      if (now - lastFrameTime > 16) {
+        lastFrameTime = now;
+        updateStars();
+        updateShootingStar();
+        drawStars();
+        drawShootingStar();
+      }
+      requestAnimationFrame(animate);
+    }
+
     let resizeTimeout;
     window.addEventListener("resize", () => {
       clearTimeout(resizeTimeout);
       resizeTimeout = setTimeout(resizeCanvas, 200);
     });
 
-    // Initialize
     resizeCanvas();
     createStars();
-    setTimeout(createShootingStar, Math.random() * 20000 + 20000); // Rare shooting stars
+    setTimeout(createShootingStar, Math.random() * 20000 + 20000);
     animate();
 
-    // Cleanup when component unmounts
     return () => {
       window.removeEventListener("resize", resizeCanvas);
     };
-  }, []); // Empty dependency array means this effect runs once when the component mounts
+  }, []);
 
-  return <canvas id="starfield" />;
+  return (
+    <canvas
+      id="starfield"
+      className="fixed inset-0 w-full h-full -z-10 bg-bgPrimary transition-colors duration-500"
+    />
+  );
 };
 
 export default Starfield;

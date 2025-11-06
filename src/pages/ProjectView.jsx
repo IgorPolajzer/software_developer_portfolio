@@ -1,5 +1,3 @@
-import './../App.css';
-import '../css/ProjectView.css';
 import { ReactComponent as GithubLogo } from './../assets/icons/github-mark.svg';
 
 function ProjectView(props) {

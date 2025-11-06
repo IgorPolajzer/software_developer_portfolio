@@ -1,46 +1,68 @@
-import React, { useState, useEffect } from 'react';
+import React from "react";
 import { Link } from "react-router-dom";
-import './../css/NavBar.css';
-import Navbar from 'react-bootstrap/Navbar';
-import { ReactComponent as HamburgerIcon } from './../assets/hamburger_icon.svg';
-import { ReactComponent as CloseIcon } from './../assets/close_icon.svg';
 
-function NavBar() {
-  const [menuOpened, setIsOpened] = useState(false); // Toggles if menu is opened or closed
-
-  const handleMobileMenuToggle = () => {
-    setIsOpened(!menuOpened);
-  };
-
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth > 1000) {
-        setIsOpened(false); // Close the menu if the screen width is above 1000px
-      }
-    };
-  }, []);
-
+const NavBar = ({ logo, title, routes }) => {
   return (
-      <Navbar expand="lg" className={menuOpened ? 'nav-bar-mobile' : "nav-bar"} fixed="top">
+    <nav className="fixed top-0 w-full z-[1000] bg-[var(--color-secondary)]/80 backdrop-blur-sm py-8 px-10 sm:px-10 transition-all duration-300">
+      <div className="max-w-screen-xl mx-auto flex items-center justify-between">
+        {/* Logo + Title */}
+        <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
+          {logo && <img src={logo} alt="Logo" className="h-8 w-auto" />}
+          <span className="text-[var(--color-text-base)] font-bold text-xl sm:text-2xl whitespace-nowrap">
+            {title}
+          </span>
+        </Link>
 
-        <div className="title">Igor Polajžer - Software developer</div>
-
-        <ul className={menuOpened ? 'nav-links-mobile' : 'nav-links'}>
-          <Link to="/" className="nav-link">About me</Link>
-          <Link to="/projects" className="nav-link">My projects</Link>
-          <Link to="/cv" className="nav-link">CV - Curriculum Vitae</Link>
-          <Link to="/contact" className="nav-link">Contact me</Link>
-        </ul>
-
-        <div className="hamburger-icon" onClick={handleMobileMenuToggle}>
-          {menuOpened ? (
-              <CloseIcon height={70} width={70}/>
-          ) : (
-              <HamburgerIcon/>
-          )}
+        {/* Hamburger button */}
+        <div className="lg:hidden">
+          <input type="checkbox" id="menu-toggle" className="hidden peer" />
+          <label
+            htmlFor="menu-toggle"
+            className="flex items-center h-8 w-8 cursor-pointer text-[var(--color-text-base)]"
+          >
+            <svg
+              className="peer-checked:hidden h-8 w-8"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <line x1="3" y1="6" x2="21" y2="6" />
+              <line x1="3" y1="12" x2="21" y2="12" />
+              <line x1="3" y1="18" x2="21" y2="18" />
+            </svg>
+            <svg
+              className="hidden peer-checked:block h-8 w-8"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          </label>
         </div>
-      </Navbar>
+
+        {/* Desktop Links */}
+        <ul className="hidden lg:flex gap-5">
+          {routes.map((route) => (
+            <Link
+              key={route.path}
+              to={route.path}
+              className="text-[var(--color-text-base)] text-lg font-semibold hover:text-[var(--color-primary)] hover:shadow-[0_0_10px_var(--color-primary)] transition-all"
+            >
+              {route.label}
+            </Link>
+          ))}
+        </ul>
+      </div>
+    </nav>
   );
-}
+};
 
 export default NavBar;

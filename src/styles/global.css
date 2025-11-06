@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Default theme (dark) */
+    --color-primary: #0a1428;        /* deep blue center for gradient */
+    --color-secondary: #000000;      /* black edge */
+    --color-text-base: #ffffff;      /* glowing stars */
+    --color-bg-primary: #0a1428;     /* canvas background */
+    --stars-background: #0a1428;
+    --stars-color: #ffffff;          /* glowing stars */
+  }
+}
+
+/* Light theme: white background, dark/gray stars and text */
+.theme-light {
+  --color-primary: #ffffff;          /* white background center */
+  --color-secondary: #f7fafc;        /* subtle edge gradient */
+  --color-text-base: #1a202c;        /* text black/gray */
+  --color-bg-primary: #ffffff;       /* canvas background */
+  --stars-background: #ffffff;
+  --stars-color: #1a202c;            /* stars black/gray */
+}
+
+.theme-dark {
+  --color-primary: #0a1428;        /* deep blue center for gradient */
+  --color-secondary: #000000;      /* black edge */
+  --color-text-base: #ffffff;      /* glowing stars */
+  --color-bg-primary: #0a1428;     /* canvas background */
+  --stars-background: #0a1428;
+  --stars-color: #ffffff;          /* glowing stars */
+}
