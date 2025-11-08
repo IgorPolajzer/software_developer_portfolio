@@ -17,10 +17,10 @@ const Starfield = () => {
       getComputedStyle(document.documentElement).getPropertyValue(name).trim();
 
   const getThemeColors = () => ({
-    primary: getCSSVar("--color-primary") || "#0a1428",
-    secondary: getCSSVar("--color-secondary") || "#000000",
-    textBase: getCSSVar("--color-text-base") || "#ffffff",
-    bgPrimary: getCSSVar("--color-bg-primary") || "#0a1428",
+    primary: getCSSVar("--stars-primary") || "#0a1428",
+    secondary: getCSSVar("--stars-secondary") || "#000000",
+    textBase: getCSSVar("--stars-text-base") || "#ffffff",
+    bgPrimary: getCSSVar("--stars-bg-primary") || "#0a1428",
   });
 
     // Resize canvas
