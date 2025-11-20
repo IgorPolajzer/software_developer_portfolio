@@ -13,8 +13,7 @@ function PaginatedCard({title, subtitle, pages}) {
     };
 
     const isDisabled = (direction) => false;
-    return (
-        <div className="flex flex-col items-center w-full p-20">
+    return (<div className="flex flex-col items-center w-full p-20">
             <div className="text-center mb-6">
                 <h1 className="text-3xl font-semibold text-[var(--color-primary)] mb-2">{title}</h1>
                 <h2 className="font-semibold text-[var(--color-subtitle)]">{subtitle}</h2>
@@ -22,7 +21,7 @@ function PaginatedCard({title, subtitle, pages}) {
 
             <button
                 onClick={movePrev}
-                className="absolute top-1/2 left-2 -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg z-10"
+                className="absolute top-1/2 left-2 -translate-y-1/2 bg-[var(--color-bg-primary-opacity)] hover:bg-white/40 text-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg z-10"
                 disabled={isDisabled("prev")}
             >
                 <svg
@@ -35,12 +34,11 @@ function PaginatedCard({title, subtitle, pages}) {
                 >
                     <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7"/>
                 </svg>
-                <span className="sr-only">Prev</span>
             </button>
 
             <button
                 onClick={moveNext}
-                className="absolute top-1/2 right-2 -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg z-10"
+                className="absolute top-1/2 right-2 -translate-y-1/2 bg-[var(--color-bg-primary-opacity)] hover:bg-white/40 text-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg z-10"
                 disabled={isDisabled("next")}
             >
                 <svg
@@ -53,7 +51,6 @@ function PaginatedCard({title, subtitle, pages}) {
                 >
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7"/>
                 </svg>
-                <span className="sr-only">Next</span>
             </button>
 
             <div
@@ -61,38 +58,31 @@ function PaginatedCard({title, subtitle, pages}) {
                 className="flex transition-transform duration-500 ease-in-out"
                 style={{transform: `translateX(-${currentIndex * 100}%)`}}
             >
-                {pages.map((page, idx) => (
-                    <div
+                {pages.map((page, idx) => (<div
                         key={idx}
-                        className="flex-shrink-0 w-full flex flex-col items-center justify-center p-6 bg-white/10 rounded-2xl mx-2 text-center rounded-lg border-2 border-[var(--color-text-base)]"
+                        className="flex-shrink-0 w-full flex flex-col items-center justify-center p-6 bg-[var(--color-bg-primary-opacity)] rounded-2xl mx-2 text-center border-2 border-[var(--color-text-base)]"
                     >
                         <img
                             src={page.image}
                             alt={page.company}
-                            className="h-28 md:h-36 mb-4 rounded-lg bg-white/10 p-2"
+                            className="h-28 md:h-36 mb-4 rounded-lg bg-[var(--color-bg-primary-opacity)] p-2"
                         />
                         <h3 className="text-lg md:text-xl font-bold text-[var(--color-text-base)] mb-1">
                             {page.company} - {page.role}
                         </h3>
-                        <p className="text-sm text-text-[var(--color-text-base)] mb-2">{page.timeframe}</p>
-                        <p className="text-text-[var(--color-text-base)] italic">{page.content}</p>
-                    </div>
-                ))}
+                        <p className="text-sm text-[var(--color-text-base)] mb-2">{page.timeframe}</p>
+                        <p className="text-[var(--color-text-base)] italic">{page.content}</p>
+                    </div>))}
             </div>
 
             <div className="flex justify-center">
-                {pages.map((_, idx) => (
-                    <button
+                {pages.map((_, idx) => (<button
                         key={idx}
                         onClick={() => setCurrentIndex(idx)}
-                        className={`w-3 h-3 rounded-full transition-all ${
-                            idx === currentIndex ? "bg-[var(--color-primary)]" : "bg-[var(--color-text-base)] hover:bg-white"
-                        }`}
-                    />
-                ))}
+                        className={`w-3 h-3 rounded-full transition-all ${idx === currentIndex ? "bg-[var(--color-subtitle)]" : "bg-[var(--color-text-base)] hover:bg-[var(--color-subtitle)]"}`}
+                    />))}
             </div>
-        </div>
-    );
+        </div>);
 }
 
 export default PaginatedCard;

@@ -14,11 +14,11 @@ function Timeline({items = []}) {
                         key={index}
                         date={<span className="text-[var(--color-subtitle)] font-semibold">{item.date}</span>}
                         contentStyle={{
-                            background: item.background || "var(--color-bg-primary)",
+                            background: "var(--color-bg-primary)",
                             color: "var(--color-text-base)",
                             borderRadius: "1rem",
                             borderWidth: "2px", // <-- border thickness
-                            borderColor: item.borderColor || "var(--color-title)", // <-- border color
+                            borderColor: "var(--color-primary)",
                             borderStyle: "solid", // <-- must set the style
                             padding: "1.5rem",
                             boxShadow: "0 10px 25px rgba(0,0,0,0.3)",
@@ -28,7 +28,7 @@ function Timeline({items = []}) {
                             borderRight: `7px solid ${item.background || "var(--color-bg-primary)"}`
                         }}
                         iconStyle={{
-                            backgroundColor: "var(--color-primary)",
+                            backgroundColor: "white",
                             display: "flex",
                             alignItems: "center",
                             justifyContent: "center",

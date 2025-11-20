@@ -1,37 +1,52 @@
 import React from "react";
-import CV from "../assets/Igor_Polajzer_CV.pdf";
-import Courses from "../assets/Course_certificates.pdf";
+import ReactMarkdown from "react-markdown";
 
-function QualificationsPage() {
+function QualificationsPage({qualifications}) {
   const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 
-  const renderPDFSection = (title, file) => (
-    <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md py-6 mb-8 transition-colors duration-500">
-      <h1 className="text-2xl font-bold mb-2 text-gray-900 dark:text-white">{title}</h1>
-      <hr className="border-gray-300 dark:border-gray-700 mb-4" />
+  const renderPDFSection = (title, file, description) => (
+    <div className="bg-[var(--color-secondary)]/80 backdrop-blur-md rounded-3xl shadow-lg p-6 mb-8 transition-colors duration-500">
+      <h1 className="text-3xl font-bold mb-2 text-[var(--color-text-base)]">{title}</h1>
+      <hr className="border-[var(--color-primary)] mb-4" />
+
+      {/* Markdown Description */}
+      {description && (
+        <ReactMarkdown
+          components={{
+            h1: ({node, ...props}) => <h1 className="text-2xl font-bold mb-4" {...props} />,
+            h2: ({node, ...props}) => <h2 className="text-xl font-semibold mb-3" {...props} />,
+            p: ({node, ...props}) => <p className="mb-4 leading-relaxed" {...props} />,
+            li: ({node, ...props}) => <li className="ml-4 list-disc mb-2" {...props} />,
+            a: ({node, ...props}) => <a className="text-blue-400 hover:underline" {...props} />,
+          }}
+        >
+          {description}
+        </ReactMarkdown>
+      )}
+
       {isMobile ? (
-        <div className="text-gray-800 dark:text-gray-200">
+        <div className="text-[var(--color-text-base)]">
           <p className="mb-4">
             Viewing the PDF is not available on mobile yet. Please download the PDF instead.
           </p>
           <a
             href={file}
             download
-            className="inline-block px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors duration-300"
+            className="inline-block px-4 py-2 bg-[var(--color-primary)] text-[var(--color-bg-primary)] rounded-md hover:shadow-[0_0_10px_var(--color-primary)] transition-all"
           >
             Download {title}
           </a>
         </div>
       ) : (
-        <div className="w-full h-[635px]">
+        <div className="w-full h-[635px] rounded-xl overflow-hidden">
           <object data={file} type="application/pdf" className="w-full h-full">
-            <p className="text-gray-800 dark:text-gray-200">
+            <p className="text-[var(--color-text-base)]">
               PDF failed to load. You can download it below.
             </p>
             <a
               href={file}
               download
-              className="inline-block mt-2 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors duration-300"
+              className="inline-block mt-2 px-4 py-2 bg-[var(--color-primary)] text-[var(--color-bg-primary)] rounded-md hover:shadow-[0_0_10px_var(--color-primary)] transition-all"
             >
               Download {title}
             </a>
@@ -42,9 +57,10 @@ function QualificationsPage() {
   );
 
   return (
-    <div className="max-w-5xl mx-auto px-4 py-12">
-      {renderPDFSection("Curriculum Vitae", CV)}
-      {renderPDFSection("Courses", Courses)}
+    <div className="px-[9%] py-10 text-[var(--color-text-base)]">
+      {qualifications.map((qual) =>
+        renderPDFSection(qual.title, qual.file, qual.description)
+      )}
     </div>
   );
 }

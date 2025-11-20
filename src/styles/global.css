@@ -3,43 +3,50 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
+    :root {
+        --color-primary: #ffffff;
+        --color-subtitle: #73a1e1;
+        --color-text-base: #ffffff;
+        --color-bg-primary: #0a1428;
+
+        /*Opacity*/
+        --color-bg-primary-opacity: rgba(247, 250, 252, 0.1);
+
+        /*Stars*/
+        --stars-primary: #0a1428;
+        --stars-secondary: #000000;
+        --stars-text-base: #ffffff;
+    }
+}
+
+.theme-light {
+    --color-primary: #0f131b;
+    --color-subtitle: #1153bd;
+    --color-text-base: #1a202c;
+    --color-bg-primary: #f7fafc;
+
+    /*Opacity*/
+    --color-bg-primary-opacity: rgba(10, 20, 40, 0.1);
+    --color-bg-primary-opacity-card: rgba(10, 20, 40, 0.5);
+
+    /*Stars*/
+    --stars-primary: #ffffff;
+    --stars-secondary: #f7fafc;
+    --stars-text-base: #1a202c;
+}
+
+.theme-dark {
     --color-primary: #ffffff;
+    --color-subtitle: #73a1e1;
     --color-text-base: #ffffff;
     --color-bg-primary: #0a1428;
-    --color-background: #0a1428;
+
+    /*Opacity*/
+    --color-bg-primary-opacity: rgba(247, 250, 252, 0.1);
+    --color-bg-primary-opacity-card: rgba(247, 250, 252, 0.1);
 
     /*Stars*/
     --stars-primary: #0a1428;
     --stars-secondary: #000000;
     --stars-text-base: #ffffff;
-  }
-}
-
-.theme-light {
-  --color-primary: #0f131b;
-  --color-title: #ffffff;
-  --color-subtitle: #1153bd;
-  --color-text-base: #1a202c;
-  --color-bg-primary: #f7fafc;
-  --color-background: #f7fafc;
-
-  /*Stars*/
-  --stars-primary: #ffffff;
-  --stars-secondary: #f7fafc;
-  --stars-text-base: #1a202c;
-}
-
-.theme-dark {
-  --color-primary: #ffffff;
-  --color-title: #ffffff;
-  --color-subtitle: #73a1e1;
-  --color-text-base: #ffffff;
-  --color-bg-primary: #0a1428;
-  --color-background: #0a1428;
-
-  /*Stars*/
-  --stars-primary: #0a1428;
-  --stars-secondary: #000000;
-  --stars-text-base: #ffffff;
 }

@@ -80,7 +80,7 @@ function ContactPage({platforms, showSocial}) {
 
                     <button
                         type="submit"
-                        className="px-6 py-3 bg-[var(--color-primary)] text-[var(--color-text-base)] font-bold rounded-md hover:shadow-[0_0_20px_var(--color-text-base)] transition-all"
+                        className="px-6 py-3 bg-[var(--color-primary)] text-[var(--color-bg-primary)] font-bold rounded-md hover:shadow-[0_0_20px_var(--color-text-base)] transition-all"
                     >
                         Send
                     </button>
