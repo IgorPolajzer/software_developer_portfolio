@@ -86,7 +86,7 @@ const NavBar = ({ logo, name, title, type, theme, routes }) => {
                                                 <Link
                                                     key={route.path}
                                                     to={route.path}
-                                                    className="px-5 py-3 rounded-lg text-lg font-semibold text-[var(--color-text-base)] bg-[var(--color-bg-primary-opacity)] transition-all"
+                                                    className="px-5 py-3 text-lg font-semibold text-[var(--color-text-base)] bg-[var(--color-bg-primary-opacity)] transition-all"
                                                     onClick={() => setIsOpen(false)}
                                                 >
                                                     {route.label}
@@ -94,7 +94,7 @@ const NavBar = ({ logo, name, title, type, theme, routes }) => {
                                             ))}
                                             {/* Theme toggle in mobile menu - only if theme prop is true */}
                                             {theme && (
-                                                <div className="px-5 py-3 flex items-center justify-between">
+                                                <div className="px-5 py-3 flex items-center bg-[var(--color-bg-primary-opacity)] justify-between">
                                                     <span className="text-lg font-semibold text-[var(--color-text-base)]">Theme</span>
                                                     <ThemeToggleButton />
                                                 </div>
