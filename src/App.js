@@ -224,8 +224,7 @@ This project demonstrates full-stack capabilities from concept to deployment.
             file: "/assets/qualifications/Flutter_course.pdf"
         },
         {
-            title: "Fundamentals of Deep Learning - Nvidia" +
-                "with Dart",
+            title: "Fundamentals of Deep Learning - Nvidia",
             file: "/assets/qualifications/Fundamentals_of_deep_learning _ NVIDIA.pdf"
         }
     ];
