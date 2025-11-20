@@ -14,7 +14,11 @@ function App() {
     const stars = true;
 
     const platforms = [
-        {name: "Linkedin", url: "https://www.linkedin.com/in/igor-polajzer-developer", logo: "/assets/social/Linkedin.svg"},
+        {
+            name: "Linkedin",
+            url: "https://www.linkedin.com/in/igor-polajzer-developer",
+            logo: "/assets/social/Linkedin.svg"
+        },
         {name: "Github", url: "https://github.com/IgorPolajzer", logo: "/assets/social/Github.svg"}
     ]
 
@@ -55,7 +59,11 @@ Direct4Me ensures a **secure and efficient delivery experience** for all users.
                 {name: "MongoDB", purpose: "Database", logo: "/assets/skills/mongodb.svg"},
                 {name: "Jetpack Compose", purpose: "Mobile App", logo: "/assets/skills/compose-multiplatform.svg"},
                 {name: "Blender", purpose: "Animation", logo: "/assets/technologies/blender-svgrepo-com.svg"},
-                {name: "Davinci Resolve", purpose: "Post Production", logo: "/assets/technologies/DaVinci_Resolve_17_logo.svg"},
+                {
+                    name: "Davinci Resolve",
+                    purpose: "Post Production",
+                    logo: "/assets/technologies/DaVinci_Resolve_17_logo.svg"
+                },
             ]
         },
         {
@@ -86,18 +94,25 @@ With **classic top-down visuals** and strategic gameplay inspired by Tank Troubl
             image: "/assets/portfolio_project/portfolio_project.png",
             route: "/projects/personal-portfolio-project",
             title: "Personal portfolio website",
-            status: "Completed",
+            status: "In progress",
             description: `
-A **dynamic portfolio website** built with React and hosted on AWS Amplify.
+Welcome to the **portfolio you're browsing right now** — a dynamic and ever-evolving site built with React and hosted on AWS Amplify!
 
-## Features
-- Showcases my journey as a software developer
-- Information about **background, skills, and work experience**
-- Preview and downloadable CV
-- Explore detailed descriptions of projects
-- Contact form that sends emails directly
-- Links to **LinkedIn** and **GitHub** profiles
-        `,
+## What you can do here
+- Explore my journey as a software developer  
+- Dive into my **skills, background, and work experience**
+- View (or download!) my CV  
+- Check out detailed project pages with videos, tech stacks, and writeups  
+- Reach out to me directly through the contact form  
+- Find quick links to my **LinkedIn** and **GitHub**  
+
+---
+## Coming Soon: Build Your Own Portfolio  
+I'm currently working on a custom **domain-specific language (DSL)** for portfolio creation.  
+Soon, **you** will be able to generate your own portfolio website using a simple, expressive DSL notation — right here.
+
+Have fun exploring!
+`,
             github: "https://github.com/IgorPolajzer/software_developer_portfolio",
             technologies: [
                 {name: "React", purpose: "Frontend", logo: "/assets/skills/react.svg"},
@@ -181,8 +196,16 @@ This project demonstrates full-stack capabilities from concept to deployment.
             technologies: [
                 {name: "Flutter", purpose: "Frontend / Mobile", logo: "/assets/skills/flutter.svg"},
                 {name: "Firebase", purpose: "Backend / Cloud", logo: "/assets/technologies/icons8-firebase-24.png"},
-                {name: "Firebase AI Logic", purpose: "AI / Machine Learning", logo: "/assets/technologies/ai-svgrepo-com.svg"},
-                {name: "Provider / Riverpod", purpose: "State Management", logo: "/assets/technologies/flutter-package-svgrepo-com.svg"},
+                {
+                    name: "Firebase AI Logic",
+                    purpose: "AI / Machine Learning",
+                    logo: "/assets/technologies/ai-svgrepo-com.svg"
+                },
+                {
+                    name: "Provider / Riverpod",
+                    purpose: "State Management",
+                    logo: "/assets/technologies/flutter-package-svgrepo-com.svg"
+                },
                 {name: "Figma", purpose: "Design / UI", logo: "/assets/technologies/Figma-logo.svg"},
             ]
         }
@@ -195,9 +218,15 @@ This project demonstrates full-stack capabilities from concept to deployment.
             file: "/assets/qualifications/Igor_Polajzer_CV.pdf"
         },
         {
-            title: "Course Certificates",
-            description: "Certificates for courses and training I have completed in software development.",
-            file: "/assets/qualifications/Course_certificates.pdf"
+            title: "The Complete Flutter\n" +
+                "Development Bootcamp\n" +
+                "with Dart",
+            file: "/assets/qualifications/Flutter_course.pdf"
+        },
+        {
+            title: "Fundamentals of Deep Learning - Nvidia" +
+                "with Dart",
+            file: "/assets/qualifications/Fundamentals_of_deep_learning _ NVIDIA.pdf"
         }
     ];
 
@@ -206,24 +235,11 @@ This project demonstrates full-stack capabilities from concept to deployment.
         {path: "/", label: "Home", navbar: "true", element: <AboutPage/>},
         {path: "/projects", navbar: "true", label: "My Projects", element: <ProjectsPage projects={projects}/>},
         {
-            path: "/content",
+            path: "/qualifications",
             navbar: "true",
-            label: "My Page",
-            element: <ContentPage
-                title="Title"
-                content={`# Hello!
-
-**I'm Igor Polajžer**, a software developer.
-
-- React & Flutter developer
-- Python & Java projects
-- Passionate about AI & gamification
-
-[Check my portfolio](https://igorpolajzer.com)
-`}
-            />
+            label: "Qualifications",
+            element: <QualificationsPage qualifications={qualifications}/>
         },
-        {path: "/qualifications", navbar: "true", label: "Qualifications", element: <QualificationsPage qualifications={qualifications}/>},
         {
             path: "/contact",
             navbar: "true",
@@ -235,7 +251,8 @@ This project demonstrates full-stack capabilities from concept to deployment.
     return (
         <Router>
             <div className={`pt-24 ${stars ? "" : "bg-[var(--color-bg-primary)]"}`}>
-                <NavBar name="Igor Polajžer" title="dipl. inž. rač. in inf. tehnol. (VS)" logo="/assets/meta/dev_icon.svg"
+                <NavBar name="Igor Polajžer" title="dipl. inž. rač. in inf. tehnol. (VS)"
+                        logo="/assets/meta/dev_icon.svg"
                         type="inline" theme={true} routes={routes}/>
                 {stars && <Stars/>}
                 <Routes>
