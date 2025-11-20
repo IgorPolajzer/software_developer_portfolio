@@ -236,7 +236,7 @@ This project demonstrates full-stack capabilities from concept to deployment.
         <Router>
             <div className={`pt-24 ${stars ? "" : "bg-[var(--color-bg-primary)]"}`}>
                 <NavBar name="Igor Polajžer" title="dipl. inž. rač. in inf. tehnol. (VS)" logo="/assets/meta/dev_icon.svg"
-                        type="inline" routes={routes}/>
+                        type="inline" theme={true} routes={routes}/>
                 {stars && <Stars/>}
                 <Routes>
                     {routes.map((route) => (
