@@ -234,6 +234,24 @@ This project demonstrates full-stack capabilities from concept to deployment.
         {path: "/", label: "Home", navbar: "true", element: <AboutPage/>},
         {path: "/projects", navbar: "true", label: "My Projects", element: <ProjectsPage projects={projects}/>},
         {
+            path: "/content",
+            navbar: "true",
+            label: "My Page",
+            element: <ContentPage
+                title="Title"
+                content={`# Hello!
+
+**I'm Igor Polajžer**, a software developer.
+
+- React & Flutter developer
+- Python & Java projects
+- Passionate about AI & gamification
+
+[Check my portfolio](https://igorpolajzer.com)
+`}
+            />
+        },
+        {
             path: "/qualifications",
             navbar: "true",
             label: "Qualifications",

@@ -1,6 +1,6 @@
 import AvatarCard from "../components/AvatarCard";
 import Timeline from "../components/Timeline";
-import Skills from "../components/Skills";
+import GridCard from "../components/GridCard";
 import PaginatedCard from "../components/PaginatedCard";
 import AnimationWrapper from "../components/AnimationWrapper";
 
@@ -58,8 +58,8 @@ function AboutPage() {
                     in Computer Science from FERI in Maribor. I recently started my Master’s in Computer Science
                     at FERI, focusing on software engineering, problem-solving, and modern technologies.
                     Passionate about building solutions and constantly improving, I enjoy taking on new challenges."/>,
-        <Skills title="My Skills" subtitle="IF YOU WANT TO SEE MY SKILLS IN ACTION TAKE A LOOK AT MY PROJECTS"
-                skills={skills}/>,
+        <GridCard title="My Skills" subtitle="IF YOU WANT TO SEE MY SKILLS IN ACTION TAKE A LOOK AT MY PROJECTS"
+                  skills={skills}/>,
         <PaginatedCard title="Work Experience" subtitle="COMPANIES I WORKED AT" pages={pages}/>,
     ];
 
@@ -95,16 +95,16 @@ function AboutPage() {
             iconPath: "../assets/timeline_icons/setronica_logo.png",
         },
         {
-            date: "March 24 2025 - Ongoing",
-            title: "Software developer Tridens d.o.o",
-            location: "Maribor - Slovenia",
-            iconPath: "../assets/timeline_icons/Tridens.png",
-        },
-        {
             date: "October 1 2022 - August 28 2025",
             title: "BSc of Computer Science and IT Engineering - FERI",
             location: "Maribor - Slovenia",
             iconPath: "../assets/timeline_icons/university.svg",
+        },
+        {
+            date: "March 24 2025 - Ongoing",
+            title: "Software developer Tridens d.o.o",
+            location: "Maribor - Slovenia",
+            iconPath: "../assets/timeline_icons/Tridens.png",
         },
         {
             date: "October 1 2025 - Ongoing",

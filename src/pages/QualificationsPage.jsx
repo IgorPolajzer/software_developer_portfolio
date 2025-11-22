@@ -24,20 +24,17 @@ function QualificationsPage({qualifications}) {
         </ReactMarkdown>
       )}
 
-      {isMobile ? (
-        <div className="text-[var(--color-text-base)]">
-          <p className="mb-4">
-            Viewing the PDF is not available on mobile yet. Please download the PDF instead.
-          </p>
-          <a
-            href={file}
-            download
-            className="inline-block px-4 py-2 bg-[var(--color-primary)] text-[var(--color-bg-primary)] rounded-md hover:shadow-[0_0_10px_var(--color-primary)] transition-all"
-          >
-            Download {title}
-          </a>
-        </div>
-      ) : (
+      {/*{isMobile ? (*/}
+      {/*  <div className="text-[var(--color-text-base)]">*/}
+      {/*    <a*/}
+      {/*      href={file}*/}
+      {/*      download*/}
+      {/*      className="inline-block px-4 py-2 bg-[var(--color-primary)] text-[var(--color-bg-primary)] rounded-md hover:shadow-[0_0_10px_var(--color-primary)] transition-all"*/}
+      {/*    >*/}
+      {/*      View {title}*/}
+      {/*    </a>*/}
+      {/*  </div>*/}
+      {/*) : (*/}
         <div className="w-full h-[635px] rounded-xl overflow-hidden">
           <object data={file} type="application/pdf" className="w-full h-full">
             <p className="text-[var(--color-text-base)]">
@@ -52,7 +49,7 @@ function QualificationsPage({qualifications}) {
             </a>
           </object>
         </div>
-      )}
+      {/*)}*/}
     </div>
   );
 

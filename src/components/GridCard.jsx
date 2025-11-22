@@ -1,4 +1,4 @@
-function Skills({ title, subtitle, skills }) {
+function GridCard({ title, subtitle, skills }) {
   return (
     <div className="flex flex-col items-center w-full p-20">
       <div className="text-center mb-6">
@@ -21,4 +21,4 @@ function Skills({ title, subtitle, skills }) {
   );
 }
 
-export default Skills;
+export default GridCard;
