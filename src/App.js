@@ -44,6 +44,8 @@ Direct4Me is an **innovative delivery management platform** that empowers users 
 - Unique **QR code scanning mechanism** to unlock boxes
 
 Direct4Me ensures a **secure and efficient delivery experience** for all users.
+
+**Find out more about the project and R-AID team here:** [R-AID Direct4Me presentation](https://onedrive.live.com/personal/64f8d6f5c33b9908/_layouts/15/Doc.aspx?sourcedoc=%7B23bf8bd6-9145-4bc1-8dbd-5b6fbb68cd08%7D&action=default&redeem=aHR0cHM6Ly8xZHJ2Lm1zL3AvYy82NGY4ZDZmNWMzM2I5OTA4L0VkYUx2eU5Ga2NGTGpiMWJiN3RvelFnQjE1bFBtaVN0LU1HdHFkZVJTUnA1MWc_ZT1yTkxNQmM&slrid=aa3bdca1-b013-0000-9a6a-730ca904b773&originalPath=aHR0cHM6Ly8xZHJ2Lm1zL3AvYy82NGY4ZDZmNWMzM2I5OTA4L0lRRFdpNzhqUlpIQlM0MjlXMi03YU0wSUFkZVpUNW9rcmZqQnJhblhrVWthZWRZP3J0aW1lPWNqeGdxcTBxM2tn&CID=fb659215-c44d-49c2-948c-34d7fed37f05&_SRM=0%3AG%3A51&file=Kon%C4%8DnaPredstavitev_R-AID.pptx)
         `,
             status: "Completed",
             github: "https://github.com/orgs/R-AID-Github/repositories",
