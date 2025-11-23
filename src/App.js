@@ -95,7 +95,7 @@ With **classic top-down visuals** and strategic gameplay inspired by Tank Troubl
         {
             image: "/assets/portfolio_project/portfolio_project.png",
             route: "/projects/personal-portfolio-project",
-            title: "Personal portfolio website",
+            title: "Personal portfolio website & Portfolio DSL",
             status: "In progress",
             description: `
 Welcome to the **portfolio you're browsing right now** — a dynamic and ever-evolving site built with React and hosted on AWS Amplify!
