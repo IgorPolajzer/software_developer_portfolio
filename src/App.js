@@ -6,9 +6,11 @@ import QualificationsPage from "./pages/QualificationsPage";
 import ContactPage from "./pages/ContactPage";
 import Stars from './components/Stars'
 import './styles/global.css';
-import ContentPage from "./pages/ContentPage";
 import Footer from "./components/Footer";
 import ProjectPage from "./pages/ProjectPage";
+import AvatarCard from "./components/AvatarCard";
+import GridCard from "./components/GridCard";
+import PaginatedCard from "./components/PaginatedCard";
 
 function App() {
     const stars = true;
@@ -22,7 +24,182 @@ function App() {
         {name: "Github", url: "https://github.com/IgorPolajzer", logo: "/assets/social/Github.svg"}
     ]
 
+    const skills = [
+        {iconPath: "/assets/skills/html-5.svg", label: "HTML"},
+        {iconPath: "/assets/skills/css-3.svg", label: "CSS"},
+        {iconPath: "/assets/skills/javascript.svg", label: "JavaScript"},
+        {iconPath: "/assets/skills/nodejs.svg", label: "Node.js"},
+        {iconPath: "/assets/skills/mongodb.svg", label: "MongoDB"},
+        {iconPath: "/assets/skills/mysql.svg", label: "mySQL"},
+        {iconPath: "/assets/skills/postgresql.svg", label: "PostgreSQL"},
+        {iconPath: "/assets/skills/full-stack.svg", label: "Web Stacks (MERN, LAMP)"},
+        {iconPath: "/assets/skills/git-icon.svg", label: "Git"},
+        {iconPath: "/assets/skills/docker-icon.svg", label: "Docker"},
+        {iconPath: "/assets/skills/c.svg", label: "C"},
+        {iconPath: "/assets/skills/c-plusplus.svg", label: "C++"},
+        {iconPath: "/assets/skills/c-sharp.svg", label: "C#"},
+        {iconPath: "/assets/skills/java.svg", label: "Java"},
+        {iconPath: "/assets/skills/spring-boot.svg", label: "Spring Boot"},
+        {iconPath: "/assets/skills/kotlin-icon.svg", label: "Kotlin"},
+        {iconPath: "/assets/skills/android-icon.svg", label: "Android Studio"},
+        {iconPath: "/assets/skills/compose-multiplatform.svg", label: "Jetpack Compose"},
+        {iconPath: "/assets/skills/flutter.svg", label: "Flutter"},
+        {iconPath: "/assets/skills/python-svgrepo-com.svg", label: "Python"},
+    ];
+
+    const pages = [
+        {
+            company: "Tridens d.o.o",
+            role: "Software Developer",
+            timeframe: "March 24 2025 - Current",
+            image: "/assets/pages/Tridens.png",
+            content: `At Tridens d.o.o, I have been working as a Java developer, contributing to backend systems and microservices development.`
+        },
+        {
+            company: "Setronica d.o.o",
+            role: "Internship – QA Engineer",
+            timeframe: "August 1 2024 - June 1 2025",
+            image: "/assets/pages/setronica_logo.png",
+            content: `Responsible for QA of LLM models, reviewing output, labeling accuracy, and providing feedback to improve performance.`
+        },
+        {
+            company: "Skylabs d.o.o",
+            role: "Internship – Software Engineer",
+            timeframe: "August 1 2023 - 31 September 2023",
+            image: "/assets/pages/skylabs_logo.png",
+            content: `Transformed C++ libraries to Python modules, developed RESTful APIs, and handled full development lifecycle.`
+        }
+    ];
+
+    const cards = [
+        <AvatarCard title="Igor Polajžer" subtitle="SOFTWARE DEVELOPER" avatar="/assets/meta/ip-tridens-white.jpg"
+                    content="I'm Igor Polajžer, a 22-year-old software developer with a Bachelor’s degree
+                    in Computer Science from FERI in Maribor. I recently started my Master’s in Computer Science
+                    at FERI, focusing on software engineering, problem-solving, and modern technologies.
+                    Passionate about building solutions and constantly improving, I enjoy taking on new challenges."/>,
+        <GridCard title="My Skills" subtitle="IF YOU WANT TO SEE MY SKILLS IN ACTION TAKE A LOOK AT MY PROJECTS"
+                  skills={skills}/>,
+        <PaginatedCard title="Work Experience" subtitle="COMPANIES I WORKED AT" pages={pages}/>,
+    ];
+
+    const timelineItems = [
+        {
+            date: "July 22 2003",
+            title: "Birth",
+            location: "Maribor - Slovenia",
+            iconPath: "../assets/timeline_icons/birthday-icon.svg",
+        },
+        {
+            date: "September 1 2009 - 24 June 2018",
+            title: "Primary School Cirkulane-Zavrč",
+            location: "Cirkulane - Slovenia",
+            iconPath: "../assets/timeline_icons/os-cirkulane-zavrc-icon.svg",
+        },
+        {
+            date: "September 1 2018 - 24 June 2022",
+            title: "Technic of mechatronics - Electrical and Computer School Ptuj",
+            location: "Ptuj - Slovenia",
+            iconPath: "../assets/timeline_icons/scptuj-icon.svg",
+        },
+        {
+            date: "August 1 2023 - 31 September 2023",
+            title: "Software engineer (Internship) Skylabs d.o.o",
+            location: "Maribor - Slovenia",
+            iconPath: "../assets/timeline_icons/skylabs_logo.png",
+        },
+        {
+            date: "August 1 2024 - June 1 2025",
+            title: "Programmer (Internship) Setronica d.o.o",
+            location: "Ljubljana (remote) - Slovenia",
+            iconPath: "../assets/timeline_icons/setronica_logo.png",
+        },
+        {
+            date: "October 1 2022 - August 28 2025",
+            title: "BSc of Computer Science and IT Engineering - FERI",
+            location: "Maribor - Slovenia",
+            iconPath: "../assets/timeline_icons/university.svg",
+        },
+        {
+            date: "March 24 2025 - Ongoing",
+            title: "Software developer Tridens d.o.o",
+            location: "Maribor - Slovenia",
+            iconPath: "../assets/timeline_icons/Tridens.png",
+        },
+        {
+            date: "October 1 2025 - Ongoing",
+            title: "MSc of Computer Science and IT Engineering - FERI",
+            location: "Maribor - Slovenia",
+            iconPath: "../assets/timeline_icons/university.svg",
+        },
+    ];
+
     const projects = [
+                {
+            image: "/assets/morph_project/morph_project_thumbnail.jpg",
+            route: "/projects/morph_project",
+            title: "Morph – AI-powered Personal Growth App",
+            status: "In progress",
+            description: `
+**Morph** is a cross-platform mobile app I created for my [diploma thesis](https://dk.um.si/IzpisGradiva.php?id=72970&lang=slv), a project where I challenged myself to blend **AI**, **gamification**, and intuitive design into a truly motivating self-improvement experience.
+
+With just a short description of your goals, Morph uses a large language model to generate **personalized growth plans** filled with meaningful tasks and helpful habits across **physical**, **mental**, and **general** categories. As you progress, your in-app **tree avatar grows with you**, turning consistency into something visual, rewarding, and fun.
+
+Built from the ground up with **Flutter** and **Firebase**, Morph features real-time syncing, authentication, a customizable calendar, and smooth progress-tracking—all crafted while pushing myself to learn new tools, solve real challenges, and expand my full-stack skill set.
+
+Morph is still growing (just like its users), with a public release planned for **early 2026**.  
+I’m excited to keep evolving it and turning it into something people can genuinely benefit from.`,
+            github: "https://github.com/IgorPolajzer/Morph",
+            videos: [
+                "/assets/morph_project/Demonstracija_Morph.mov"
+            ],
+            technologies: [
+                {name: "Flutter", purpose: "Frontend / Mobile", logo: "/assets/skills/flutter.svg"},
+                {name: "Firebase", purpose: "Backend / Cloud", logo: "/assets/technologies/icons8-firebase-24.png"},
+                {
+                    name: "Firebase AI Logic",
+                    purpose: "AI / Machine Learning",
+                    logo: "/assets/technologies/ai-svgrepo-com.svg"
+                },
+                {
+                    name: "Provider / Riverpod",
+                    purpose: "State Management",
+                    logo: "/assets/technologies/flutter-package-svgrepo-com.svg"
+                },
+                {name: "Figma", purpose: "Design / UI", logo: "/assets/technologies/Figma-logo.svg"},
+            ]
+        },
+        {
+            image: "/assets/portfolio_project/portfolio_project.png",
+            route: "/projects/personal-portfolio-project",
+            title: "Personal portfolio website & Portfolio DSL",
+            status: "In progress",
+            description: `
+Welcome to the **portfolio you're browsing right now** — a dynamic and ever-evolving site built with React and hosted on AWS Amplify!
+
+## What you can do here
+- Explore my journey as a software developer  
+- Dive into my **skills, background, and work experience**
+- View (or download!) my CV  
+- Check out detailed project pages with videos, tech stacks, and writeups  
+- Reach out to me directly through the contact form  
+- Find quick links to my **LinkedIn** and **GitHub**  
+
+---
+## Coming Soon: Build Your Own Portfolio  
+I'm currently working on a custom **domain-specific language (DSL)** for portfolio creation.  
+Soon, **you** will be able to generate your own portfolio website using a simple, expressive DSL notation — right here.
+
+Have fun exploring!
+`,
+            github: "https://github.com/IgorPolajzer/software_developer_portfolio",
+            technologies: [
+                {name: "React", purpose: "Frontend", logo: "/assets/skills/react.svg"},
+                {name: "Tailwind", purpose: "Styling", logo: "/assets/technologies/tailwind-svgrepo-com.svg"},
+                {name: "Framer Motion", purpose: "Animation", logo: "/assets/technologies/framer-svgrepo-com.svg"},
+                {name: "AWS Amplify", purpose: "Hosting", logo: "/assets/technologies/aws-amplify-seeklogo.svg"},
+                {name: "EmailJS", purpose: "Email Service", logo: "/assets/technologies/emailjs.svg"},
+            ]
+        },
         {
             image: "/assets/direct4me_project/direct4me_project.png",
             route: "/projects/direct-4-me-project",
@@ -93,38 +270,6 @@ With **classic top-down visuals** and strategic gameplay inspired by Tank Troubl
             ]
         },
         {
-            image: "/assets/portfolio_project/portfolio_project.png",
-            route: "/projects/personal-portfolio-project",
-            title: "Personal portfolio website & Portfolio DSL",
-            status: "In progress",
-            description: `
-Welcome to the **portfolio you're browsing right now** — a dynamic and ever-evolving site built with React and hosted on AWS Amplify!
-
-## What you can do here
-- Explore my journey as a software developer  
-- Dive into my **skills, background, and work experience**
-- View (or download!) my CV  
-- Check out detailed project pages with videos, tech stacks, and writeups  
-- Reach out to me directly through the contact form  
-- Find quick links to my **LinkedIn** and **GitHub**  
-
----
-## Coming Soon: Build Your Own Portfolio  
-I'm currently working on a custom **domain-specific language (DSL)** for portfolio creation.  
-Soon, **you** will be able to generate your own portfolio website using a simple, expressive DSL notation — right here.
-
-Have fun exploring!
-`,
-            github: "https://github.com/IgorPolajzer/software_developer_portfolio",
-            technologies: [
-                {name: "React", purpose: "Frontend", logo: "/assets/skills/react.svg"},
-                {name: "Tailwind", purpose: "Styling", logo: "/assets/technologies/tailwind-svgrepo-com.svg"},
-                {name: "Framer Motion", purpose: "Animation", logo: "/assets/technologies/framer-svgrepo-com.svg"},
-                {name: "AWS Amplify", purpose: "Hosting", logo: "/assets/technologies/aws-amplify-seeklogo.svg"},
-                {name: "EmailJS", purpose: "Email Service", logo: "/assets/technologies/emailjs.svg"},
-            ]
-        },
-        {
             image: "/assets/chess_project/Chess.png",
             route: "/projects/chess-project",
             title: "Chess",
@@ -171,45 +316,6 @@ Appointments can be scheduled via website or by contacting them directly:
                 {name: "AWS Lightsail", purpose: "Hosting", logo: "/assets/technologies/amazon-lightsail.svg"},
                 {name: "AWS Route 53", purpose: "Domain Provider", logo: "/assets/technologies/Route 53.svg"},
             ]
-        },
-        {
-            image: "/assets/morph_project/morph_project_thumbnail.jpg",
-            route: "/projects/morph_project",
-            title: "Morph – AI-powered Personal Growth App",
-            status: "In progress",
-            description: `
-A **cross-platform mobile application** developed as my final diploma thesis.
-
-## Features
-- Personalized self-improvement plans using **AI and gamification**
-- Habit categories: **physical, mental, general**
-- **Flutter & Firebase** for real-time data and authentication
-- Dynamic progress-tracking with rewarding system
-- AI-driven plan generation and customizable calendar
-- Growth metaphors: tree avatar that grows with progress
-
-Morph is still in active development with plans to release on **Google Play Store** and **Apple App Store**.  
-This project demonstrates full-stack capabilities from concept to deployment.
-        `,
-            github: "https://github.com/IgorPolajzer/Morph",
-            videos: [
-                "/assets/morph_project/Demonstracija_Morph.mov"
-            ],
-            technologies: [
-                {name: "Flutter", purpose: "Frontend / Mobile", logo: "/assets/skills/flutter.svg"},
-                {name: "Firebase", purpose: "Backend / Cloud", logo: "/assets/technologies/icons8-firebase-24.png"},
-                {
-                    name: "Firebase AI Logic",
-                    purpose: "AI / Machine Learning",
-                    logo: "/assets/technologies/ai-svgrepo-com.svg"
-                },
-                {
-                    name: "Provider / Riverpod",
-                    purpose: "State Management",
-                    logo: "/assets/technologies/flutter-package-svgrepo-com.svg"
-                },
-                {name: "Figma", purpose: "Design / UI", logo: "/assets/technologies/Figma-logo.svg"},
-            ]
         }
     ];
 
@@ -233,7 +339,12 @@ This project demonstrates full-stack capabilities from concept to deployment.
 
 
     const routes = [
-        {path: "/", label: "Home", navbar: "true", element: <AboutPage/>},
+        {
+            path: "/",
+            label: "Home",
+            navbar: "true",
+            element: <AboutPage skills={skills} pages={pages} cards={cards} timelineItems={timelineItems}/>
+        },
         {path: "/projects", navbar: "true", label: "My Projects", element: <ProjectsPage projects={projects}/>},
         {
             path: "/qualifications",
@@ -254,7 +365,7 @@ This project demonstrates full-stack capabilities from concept to deployment.
             <div className={`pt-24 ${stars ? "" : "bg-[var(--color-bg-primary)]"}`}>
                 <NavBar name="Igor Polajžer" title="dipl. inž. rač. in inf. tehnol. (VS)"
                         logo="/assets/meta/dev_icon.svg"
-                        type="inline" theme={true} routes={routes}/>
+                        type="inline" themeToggle={true} routes={routes}/>
                 {stars && <Stars/>}
                 <Routes>
                     {routes.map((route) => (

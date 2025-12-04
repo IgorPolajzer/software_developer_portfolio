@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useTheme } from './ThemeContext';
 
-const NavBar = ({ logo, name, title, type, theme, routes }) => {
+const NavBar = ({ logo, name, title, type, themeToggle, routes }) => {
     const [isOpen, setIsOpen] = useState(false);
     const { theme: currentTheme, toggleTheme } = useTheme();
 
@@ -59,7 +59,7 @@ const NavBar = ({ logo, name, title, type, theme, routes }) => {
 
                             <div className="flex items-center gap-3">
                                 {/* Theme toggle - only visible if theme prop is true */}
-                                {theme && <ThemeToggleButton className="hidden lg:block" />}
+                                {themeToggle && <ThemeToggleButton className="hidden lg:block" />}
 
                                 <div className="lg:hidden">
                                     <button
@@ -93,7 +93,7 @@ const NavBar = ({ logo, name, title, type, theme, routes }) => {
                                                 </Link>
                                             ))}
                                             {/* Theme toggle in mobile menu - only if theme prop is true */}
-                                            {theme && (
+                                            {themeToggle && (
                                                 <div className="px-5 py-3 flex items-center bg-[var(--color-bg-primary-opacity)] justify-between">
                                                     <span className="text-lg font-semibold text-[var(--color-text-base)]">Theme</span>
                                                     <ThemeToggleButton />
@@ -166,7 +166,7 @@ const NavBar = ({ logo, name, title, type, theme, routes }) => {
                         </nav>
 
                         {/* Theme toggle at bottom of sidebar - only if theme prop is true */}
-                        {theme && (
+                        {themeToggle && (
                             <div className="mt-auto pt-6 w-full">
                                 <div className="flex items-center justify-between px-5">
                                     <span className="text-sm font-semibold text-[var(--color-text-base)]">Theme</span>
