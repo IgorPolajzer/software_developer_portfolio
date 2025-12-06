@@ -142,7 +142,7 @@ function App() {
             title: "Morph – AI-powered Personal Growth App",
             status: "In progress",
             description: `
-**Morph** is a cross-platform mobile app I created for my [diploma thesis]https://dk.um.si/IzpisGradiva.php?id=94126&lang=slv), a project where I challenged myself to blend **AI**, **gamification**, and intuitive design into a truly motivating self-improvement experience.
+**Morph** is a cross-platform mobile app I created for my [diploma thesis](https://dk.um.si/IzpisGradiva.php?id=94126&lang=slv), a project where I challenged myself to blend **AI**, **gamification**, and intuitive design into a truly motivating self-improvement experience.
 
 With just a short description of your goals, Morph uses a large language model to generate **personalized growth plans** filled with meaningful tasks and helpful habits across **physical**, **mental**, and **general** categories. As you progress, your in-app **tree avatar grows with you**, turning consistency into something visual, rewarding, and fun.
 
