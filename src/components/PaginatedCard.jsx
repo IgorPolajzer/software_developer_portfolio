@@ -69,13 +69,13 @@ function PaginatedCard({title, subtitle, pages}) {
                             >
                                 <img
                                     src={page.image}
-                                    alt={page.company}
+                                    alt={page.title}
                                     className="h-28 md:h-36 mb-4 rounded-lg bg-[var(--color-bg-primary-opacity)] p-2 object-contain"
                                 />
                                 <h3 className="text-lg md:text-xl font-bold text-[var(--color-text-base)] mb-1">
-                                    {page.company} - {page.role}
+                                    {page.title} - {page.subtitle}
                                 </h3>
-                                <p className="text-sm text-[var(--color-text-base)] mb-2">{page.timeframe}</p>
+                                <p className="text-sm text-[var(--color-text-base)] mb-2">{page.note}</p>
                                 <p className="text-[var(--color-text-base)] italic">{page.content}</p>
                             </div>
                         ))}
