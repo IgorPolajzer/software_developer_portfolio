@@ -1,7 +1,7 @@
 import React, {useRef} from 'react';
 import emailjs from '@emailjs/browser';
 
-function ContactPage({platforms, showSocial}) {
+function ContactPage({platforms, showSocial, contactMeInfo}) {
     const form = useRef();
 
     const sendEmail = (e) => {
@@ -9,17 +9,19 @@ function ContactPage({platforms, showSocial}) {
 
         emailjs
             .sendForm(
-                process.env.REACT_APP_EMAIL_JS_SERVICE_ID,
-                process.env.REACT_APP_EMAIL_JS_TEMPLATE_ID,
+                contactMeInfo.serviceId,
+                contactMeInfo.templateId,
                 form.current,
-                {publicKey: process.env.REACT_APP_EMAIL_JS_PUBLIC_KEY}
+                {publicKey: contactMeInfo.publicKey}
             )
             .then(
                 () => {
+                    alert(contactMeInfo.successText)
                     console.log('SUCCESS!');
                     e.target.reset();
                 },
                 (error) => {
+                    alert(contactMeInfo.failureText)
                     console.log('FAILED...', error.text);
                 }
             );
