@@ -332,6 +332,10 @@ The website, **masaze-pivko.com**, serves as the digital hub for a massage and w
     ];
 
 
+    const contactMeInfo = {
+      serviceId: process.env.REACT_APP_EMAIL_JS_SERVICE_ID ,templateId: process.env.REACT_APP_EMAIL_JS_TEMPLATE_ID ,publicKey: process.env.REACT_APP_EMAIL_JS_PUBLIC_KEY ,successText: "Thank you for contacting me — I'll respond soon!" ,failureText: "Oops, something went wrong"
+    }
+
     const routes = [
         {
             path: "/",
@@ -350,7 +354,7 @@ The website, **masaze-pivko.com**, serves as the digital hub for a massage and w
             path: "/contact",
             navbar: "true",
             label: "Contact Me",
-            element: <ContactPage platforms={platforms} showSocial={true}/>
+            element: <ContactPage platforms={platforms} showSocial={true} contactMeInfo={contactMeInfo}/>
         },
     ];
 
