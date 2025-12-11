@@ -1,4 +1,4 @@
-function GridCard({ title, subtitle, skills }) {
+function GridCard({ title, subtitle, gridElements }) {
   return (
     <div className="flex flex-col items-center w-full p-20">
       <div className="text-center mb-6">
@@ -7,7 +7,7 @@ function GridCard({ title, subtitle, skills }) {
       </div>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 w-full">
-        {skills.map((skill, idx) => (
+        {gridElements.map((skill, idx) => (
           <div
               key={idx}
               className="flex flex-col items-center justify-center p-4 bg-[var(--color-bg-primary-opacity)] rounded-lg shadow hover:scale-105 transform transition border-2 border-[var(--color-text-base)]"

@@ -30,48 +30,47 @@ function App() {
         {name: "Github", url: "https://github.com/IgorPolajzer", logo: "/assets/social/Github.svg"}
     ]
 
-    const skills = [
+    const gridElements = [
         {iconPath: "/assets/skills/html-5.svg", label: "HTML"},
+        {iconPath: "/assets/skills/react.svg", label: "React"},
         {iconPath: "/assets/skills/css-3.svg", label: "CSS"},
+        {iconPath: "/assets/technologies/tailwind-svgrepo-com.svg", label: "Tailwind CSS"},
         {iconPath: "/assets/skills/javascript.svg", label: "JavaScript"},
         {iconPath: "/assets/skills/nodejs.svg", label: "Node.js"},
-        {iconPath: "/assets/skills/mongodb.svg", label: "MongoDB"},
+        {iconPath: "/assets/skills/expressjs-icon.svg", label: "Express.js"},
+        {iconPath: "/assets/skills/spring-boot.svg", label: "Spring Boot"},
         {iconPath: "/assets/skills/mysql.svg", label: "mySQL"},
         {iconPath: "/assets/skills/postgresql.svg", label: "PostgreSQL"},
-        {iconPath: "/assets/skills/full-stack.svg", label: "Web Stacks (MERN, LAMP)"},
+        {iconPath: "/assets/skills/mongodb.svg", label: "MongoDB"},
+        {iconPath: "/assets/technologies/icons8-firebase-24.png", label: "Firebase"},
+        {iconPath: "/assets/technologies/Amazon_Web_Services-Logo.wine.svg", label: "AWS"},
         {iconPath: "/assets/skills/git-icon.svg", label: "Git"},
         {iconPath: "/assets/skills/docker-icon.svg", label: "Docker"},
-        {iconPath: "/assets/skills/c.svg", label: "C"},
         {iconPath: "/assets/skills/c-plusplus.svg", label: "C++"},
-        {iconPath: "/assets/skills/c-sharp.svg", label: "C#"},
         {iconPath: "/assets/skills/java.svg", label: "Java"},
-        {iconPath: "/assets/skills/spring-boot.svg", label: "Spring Boot"},
+        {iconPath: "/assets/skills/python-svgrepo-com.svg", label: "Python"},
         {iconPath: "/assets/skills/kotlin-icon.svg", label: "Kotlin"},
-        {iconPath: "/assets/skills/android-icon.svg", label: "Android Studio"},
         {iconPath: "/assets/skills/compose-multiplatform.svg", label: "Jetpack Compose"},
         {iconPath: "/assets/skills/flutter.svg", label: "Flutter"},
-        {iconPath: "/assets/skills/python-svgrepo-com.svg", label: "Python"},
+        {iconPath: "/assets/technologies/loading-2-svgrepo-com.svg", label: "Always learning new skills..."},
     ];
 
     const pages = [
         {
-            title: "Tridens d.o.o",
-            subtitle: "Software Developer",
-            note: "March 24 2025 - Present",
+            title: "Tridens d.o.o - Software Developer",
+            subtitle: "March 24 2025 - Present",
             image: "/assets/pages/Tridens.png",
             content: `Developing and maintaining scalable backend microservices and APIs. I use Java Spring Boot, Hibernate, and PostgreSQL, alongside other tools like Mockito/JUnit and Postman for testing, Docker for containerization, and Apache Pulsar for message queuing.`
         },
         {
-            title: "Setronica d.o.o",
-            subtitle: "Internship – QA Engineer",
-            note: "August 1 2024 - June 1 2025",
+            title: "Setronica d.o.o - QA Engineer",
+            subtitle: "August 1 2024 - June 1 2025",
             image: "/assets/pages/setronica_logo.png",
             content: `Ensured quality and performance of LLM models by rigorously evaluating outputs, labeling training datasets, and collaborating with international teams on AI refinement and solution optimization.`
         },
         {
-            title: "Skylabs d.o.o",
-            subtitle: "Internship – Software Engineer",
-            note: "August 1 2023 - 31 September 2023",
+            title: "Skylabs d.o.o - Software Engineer",
+            subtitle: "August 1 2023 - 31 September 2023",
             image: "/assets/pages/skylabs_logo.png",
             content: `Developed Python wrappers for C++ libraries, designed and built RESTful APIs, and managed contributions across the full software development lifecycle for high-tech solutions.`
         }
@@ -80,8 +79,8 @@ function App() {
     const cards = [
         <AvatarCard title="Igor Polajžer" subtitle="SOFTWARE DEVELOPER" avatar="/assets/meta/ip-tridens-white.jpg"
                     content="I'm Igor Polajžer, a Software Engineer and Master’s candidate at FERI. My expertise cover scalable systems architecture, cross-platform application development, and AI/ML integration. Driven by a passion for lifelong learning, I focus on delivering robust, innovative solutions for complex engineering challenges across the full software stack."/>,
-        <GridCard title="My Skills" subtitle="IF YOU WANT TO SEE MY SKILLS IN ACTION TAKE A LOOK AT MY PROJECTS"
-                  skills={skills}/>,
+        <GridCard title="Tech Stack" subtitle="IF YOU WANT TO SEE IT IN ACTION, TAKE A LOOK AT MY PROJECTS"
+                  gridElements={gridElements}/>,
         <PaginatedCard title="Work Experience" subtitle="COMPANIES I WORKED AT" pages={pages}/>,
     ];
 
@@ -341,7 +340,7 @@ The website, **masaze-pivko.com**, serves as the digital hub for a massage and w
             path: "/",
             label: "Home",
             navbar: "true",
-            element: <AboutPage skills={skills} pages={pages} cards={cards} timelineItems={timelineItems}/>
+            element: <AboutPage cards={cards} timelineItems={timelineItems}/>
         },
         {path: "/projects", navbar: "true", label: "My Projects", element: <ProjectsPage projects={projects}/>},
         {

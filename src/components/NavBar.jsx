@@ -41,7 +41,7 @@ const NavBar = ({ logo, name, title, type, themeToggle, routes }) => {
     );
 
     const getNavBar = (type) => {
-        const filteredRoutes = routes.filter(route => route.navbar === "true");
+        const filteredRoutes = routes.filter(route => route.navbar);
 
         if (type === "inline") {
             return (
