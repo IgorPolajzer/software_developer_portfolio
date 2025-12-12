@@ -14,7 +14,7 @@ const Footer = ({name, mail, platforms}) => {
                     <div className="flex gap-4 text-[var(--color-text-base)] sm:justify-center">
                         <a href={getMailto(mail)}
                            className="hover:text-[var(--color-primary)] transition-colors">{mail}</a>
-                        {platforms.map((platform) => (
+                        {platforms && platforms.map((platform) => (
                             <a href={platform.url} title={`Visit my ${platform.name}`} target="_blank"
                                rel="noopener noreferrer"
                                className="block transition-all hover:text-[var(--color-primary)] hover:shadow-[0_0_10px_var(--color-primary)]">

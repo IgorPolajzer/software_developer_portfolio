@@ -98,7 +98,6 @@ function App() {
             iconPath: "../assets/timeline_icons/os-cirkulane-zavrc-icon.svg",
         },
         {
-            // Changed title to match "Mechatronics Technician" from CV
             date: "September 1 2018 - June 2022",
             title: "Mechatronics Technician - Electrical and Computer School Ptuj",
             location: "Ptuj - Slovenia",
@@ -111,28 +110,24 @@ function App() {
             iconPath: "../assets/timeline_icons/university.svg",
         },
         {
-            // Changed end date to align with CV (August 2023 - October 2023)
             date: "August 2023 - October 2023",
             title: "Software developer intern - Skylabs d.o.o",
             location: "Maribor - Slovenia",
             iconPath: "../assets/timeline_icons/skylabs_logo.png",
         },
         {
-            // Simplified end date to align with CV (August 2024 - June 2025)
             date: "August 2024 - June 2025",
             title: "Programmer - Setronica d.o.o",
             location: "Ljubljana (remote) - Slovenia",
             iconPath: "../assets/timeline_icons/setronica_logo.png",
         },
         {
-            // Simplified start date to align with CV (March 2025 - Present)
             date: "March 2025 - Present",
             title: "Backend Developer - Tridens d.o.o",
             location: "Maribor - Slovenia",
             iconPath: "../assets/timeline_icons/Tridens.png",
         },
         {
-            // Simplified title and date to align with CV (Master of Computer Science, in-progress)
             date: "October 2025 - Present [Expected graduation: 2027]",
             title: "Master of Computer Science - FERI",
             location: "Maribor - Slovenia",
