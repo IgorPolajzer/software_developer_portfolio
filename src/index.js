@@ -52,7 +52,7 @@ function App() {
         {iconPath: "/assets/skills/kotlin-icon.svg", label: "Kotlin"},
         {iconPath: "/assets/skills/compose-multiplatform.svg", label: "Jetpack Compose"},
         {iconPath: "/assets/skills/flutter.svg", label: "Flutter"},
-        {iconPath: "/assets/technologies/loading-2-svgrepo-com.svg", label: "Always learning new skills..."},
+        {iconPath: "/assets/technologies/loading-2-svgrepo-com.svg", label: "Always learning — the stack is constantly evolving."},
     ];
 
     const pages = [
