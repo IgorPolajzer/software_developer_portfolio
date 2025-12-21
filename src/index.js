@@ -391,7 +391,7 @@ The website, **masaze-pivko.com**, serves as the digital hub for a massage and w
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <ThemeProvider themeProp={'light'}>
+    <ThemeProvider themeProp={'dark'}>
       <App />
     </ThemeProvider>
   </React.StrictMode>
