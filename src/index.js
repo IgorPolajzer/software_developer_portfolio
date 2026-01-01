@@ -148,7 +148,7 @@ With just a short description of your goals, Morph uses a large language model t
 
 Built from the ground up with **Flutter** and **Firebase**, Morph features real-time syncing, authentication, a customizable calendar, and smooth progress-tracking—all crafted while pushing myself to learn new tools, solve real challenges, and expand my full-stack skill set.
 
-Morph is still growing (just like its users), with a public release on the **Google Play Store** and Apple **App Store** planned for **early 2026**.  
+Morph is still growing (just like its users), with a public release on the **Google Play Store** and Apple **App Store** planned in **2026**.  
 I’m excited to keep evolving it and turning it into something people can genuinely benefit from.`,
             github: "https://github.com/IgorPolajzer/Morph",
             videos: [
