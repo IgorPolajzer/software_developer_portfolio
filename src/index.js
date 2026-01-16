@@ -78,7 +78,7 @@ function App() {
 
     const cards = [
         <AvatarCard title="Igor Polajžer" subtitle="SOFTWARE DEVELOPER" avatar="/assets/meta/ip-tridens-white.jpg"
-                    content="I'm Igor Polajžer, a Software Engineer and Master’s candidate at FERI. My expertise cover scalable systems architecture, cross-platform application development, and AI/ML integration. Driven by a passion for lifelong learning, I focus on delivering robust, innovative solutions for complex engineering challenges across the full software stack."/>,
+                    content="I'm Igor Polajžer, a Software Engineer and Master’s candidate at FERI. My interests cover scalable systems architecture, mobile and web application development, and AI/ML integration. Driven by a passion for lifelong learning, I focus on delivering robust, inovative solutions across the full software stack."/>,
         <GridCard title="Tech Stack" subtitle="IF YOU WANT TO SEE IT IN ACTION, TAKE A LOOK AT MY PROJECTS"
                   gridElements={gridElements}/>,
         <PaginatedCard title="Work Experience" subtitle="COMPANIES I WORKED AT" pages={pages}/>,
