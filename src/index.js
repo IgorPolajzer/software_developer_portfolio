@@ -60,19 +60,19 @@ function App() {
             title: "Tridens d.o.o - Software Developer",
             subtitle: "March 24 2025 - Present",
             image: "/assets/pages/Tridens.png",
-            content: `Developing and maintaining scalable backend microservices and APIs. I use Java Spring Boot, Hibernate, and PostgreSQL, alongside other tools like Mockito/JUnit and Postman for testing, Docker for containerization, and Apache Pulsar for message queuing.`
+            content: `Developing and maintaining scalable backend microservices and APIs. I use Java Spring Boot, Hibernate, PostgreSQL, and Keylcoak, alongside other tools like Mockito/JUnit and Postman for testing, Docker for containerization, and Apache Pulsar for message queuing.`
         },
         {
             title: "Setronica d.o.o - QA Engineer",
             subtitle: "August 1 2024 - June 1 2025",
             image: "/assets/pages/setronica_logo.png",
-            content: `Ensured quality and performance of LLM models by rigorously evaluating outputs, labeling training datasets, and collaborating with international teams on AI refinement and solution optimization.`
+            content: `Ensured quality and performance of LLM models by evaluating outputs, labeling training datasets, and collaborating with international teams on AI refinement.`
         },
         {
             title: "Skylabs d.o.o - Software Engineer",
             subtitle: "August 1 2023 - 31 September 2023",
             image: "/assets/pages/skylabs_logo.png",
-            content: `Developed Python wrappers for C++ libraries, designed and built RESTful APIs, and managed contributions across the full software development lifecycle for high-tech solutions.`
+            content: `Developed Python wrappers for C++ libraries and exposed them through a RESTful API with Flask.`
         }
     ];
 
