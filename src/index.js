@@ -314,7 +314,7 @@ The website, **masaze-pivko.com**, serves as the digital hub for a massage and w
             file: "/assets/qualifications/Igor_Polajzer_CV_ENG.pdf"
         },
         {
-            title: "BSc (VS) – Information and Data Technologies (FERI)",
+            title: "BSc – Information and Data Technologies (FERI)",
             description: "Bachelor of Science in Information and Data Technologies from FERI, University of Maribor, granting the professional title dipl. inž. rač. in inf. tehnol. (VS).",
             file: "/assets/qualifications/Igor_Polajzer_FERI_RIT_diploma.pdf"
         },
