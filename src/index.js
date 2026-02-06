@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
-import { ThemeProvider } from './components/ThemeContext';
+import {ThemeProvider} from './components/ThemeContext';
 import AvatarCard from "./components/AvatarCard";
 import GridCard from "./components/GridCard";
 import PaginatedCard from "./components/PaginatedCard";
@@ -15,7 +15,6 @@ import Stars from "./components/Stars";
 import ProjectPage from "./pages/ProjectPage";
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import './styles/global.css';
-import ContentPage from "./pages/ContentPage";
 
 function App() {
     const stars = true;
@@ -77,7 +76,7 @@ function App() {
     ];
 
     const cards = [
-        <AvatarCard title="Igor Polajžer" subtitle="SOFTWARE DEVELOPER" avatar="/assets/meta/ip-tridens-white.jpg"
+        <AvatarCard title="Igor Polajžer" subtitle="SOFTWARE DEVELOPER" avatar="/assets/meta/Profesional_portrait.jpg"
                     content="I'm Igor Polajžer, a Software Engineer and Master’s candidate at FERI. My interests cover scalable systems architecture, mobile and web application development, and AI/ML integration. Driven by a passion for lifelong learning, I focus on delivering robust, inovative solutions across the full software stack."/>,
         <GridCard title="Tech Stack" subtitle="IF YOU WANT TO SEE IT IN ACTION, TAKE A LOOK AT MY PROJECTS"
                   gridElements={gridElements}/>,
@@ -157,8 +156,16 @@ I’m excited to keep evolving it and turning it into something people can genui
             technologies: [
                 {name: "Flutter", purpose: "Frontend / Mobile", logo: "/assets/skills/flutter.svg"},
                 {name: "Firebase", purpose: "Backend / Cloud", logo: "/assets/technologies/icons8-firebase-24.png"},
-                {name: "Firebase AI Logic", purpose: "AI / Machine Learning", logo: "/assets/technologies/ai-svgrepo-com.svg"},
-                {name: "Provider / Riverpod", purpose: "State Management", logo: "/assets/technologies/flutter-package-svgrepo-com.svg"},
+                {
+                    name: "Firebase AI Logic",
+                    purpose: "AI / Machine Learning",
+                    logo: "/assets/technologies/ai-svgrepo-com.svg"
+                },
+                {
+                    name: "Provider / Riverpod",
+                    purpose: "State Management",
+                    logo: "/assets/technologies/flutter-package-svgrepo-com.svg"
+                },
                 {name: "Figma", purpose: "Design / UI", logo: "/assets/technologies/Figma-logo.svg"},
             ]
         },
@@ -332,7 +339,11 @@ The website, **masaze-pivko.com**, serves as the digital hub for a massage and w
 
 
     const contactMeInfo = {
-      serviceId: process.env.REACT_APP_EMAIL_JS_SERVICE_ID ,templateId: process.env.REACT_APP_EMAIL_JS_TEMPLATE_ID ,publicKey: process.env.REACT_APP_EMAIL_JS_PUBLIC_KEY ,successText: "Thank you for contacting me — I'll respond soon!" ,failureText: "Oops, something went wrong"
+        serviceId: process.env.REACT_APP_EMAIL_JS_SERVICE_ID,
+        templateId: process.env.REACT_APP_EMAIL_JS_TEMPLATE_ID,
+        publicKey: process.env.REACT_APP_EMAIL_JS_PUBLIC_KEY,
+        successText: "Thank you for contacting me — I'll respond soon!",
+        failureText: "Oops, something went wrong"
     }
 
     const routes = [
@@ -395,11 +406,11 @@ The website, **masaze-pivko.com**, serves as the digital hub for a massage and w
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <ThemeProvider themeProp={'dark'}>
-      <App />
-    </ThemeProvider>
-  </React.StrictMode>
+    <React.StrictMode>
+        <ThemeProvider themeProp={'dark'}>
+            <App/>
+        </ThemeProvider>
+    </React.StrictMode>
 );
 
 reportWebVitals();
