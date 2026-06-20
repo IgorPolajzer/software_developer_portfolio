@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from "react";
+import ReactMarkdown from "react-markdown";
 
 function AvatarCard({title, subtitle, avatar, content}) {
     return (
@@ -18,7 +19,17 @@ function AvatarCard({title, subtitle, avatar, content}) {
 
                 <div className="md:basis-2/3 text-center pt-12 md:text-left">
                     <p className="text-lg md:text-xl italic text-[var(--color-text-base)]">
+                        <ReactMarkdown
+                            components={{
+                                h1: ({node, ...props}) => <h1 className="text-3xl font-bold mb-4" {...props} />,
+                                h2: ({node, ...props}) => <h2 className="text-2xl font-semibold mb-3" {...props} />,
+                                p: ({node, ...props}) => <p className="mb-4 leading-relaxed" {...props} />,
+                                li: ({node, ...props}) => <li className="ml-4 list-disc" {...props} />,
+                                a: ({node, ...props}) => <a className="text-blue-400 hover:underline" {...props} />,
+                            }}
+                        >
                         {content}
+                        </ReactMarkdown>
                     </p>
                 </div>
             </div>

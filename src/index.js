@@ -30,28 +30,48 @@ function App() {
     ]
 
     const gridElements = [
+        // Backend
+        {iconPath: "/assets/skills/spring-boot.svg", label: "Spring Boot"},
+        {iconPath: "/assets/skills/nodejs.svg", label: "Node.js"},
+        {iconPath: "/assets/skills/expressjs-icon.svg", label: "Express.js"},
+
+        // Databases
+        {iconPath: "/assets/skills/postgresql.svg", label: "PostgreSQL"},
+        {iconPath: "/assets/skills/mysql.svg", label: "mySQL"},
+        {iconPath: "/assets/skills/mongodb.svg", label: "MongoDB"},
+
+        // Third party backend services
+        {iconPath: "/assets/skills/Logo_of_Keycloak.svg", label: "Keycloak"},
+        {iconPath: "/assets/skills/Apache-pulsar-logo.svg", label: "Apache Pulsar"},
+        {iconPath: "/assets/technologies/icons8-firebase-24.png", label: "Firebase"},
+        {iconPath: "/assets/technologies/Amazon_Web_Services-Logo.wine.svg", label: "AWS"},
+
+        // DevOps
+        {iconPath: "/assets/skills/git-icon.svg", label: "Git"},
+        {iconPath: "/assets/skills/docker-icon.svg", label: "Docker"},
+
+        // Machine learning
+        {iconPath: "/assets/skills/Scikit_learn_logo_small.svg", label: "Scikit-learn"},
+        {iconPath: "/assets/skills/PyTorch_logo_black.svg", label: "PyTorch"},
+
+        // Programming languages
+        {iconPath: "/assets/skills/java.svg", label: "Java"},
+        {iconPath: "/assets/skills/python-svgrepo-com.svg", label: "Python"},
+        {iconPath: "/assets/skills/c-plusplus.svg", label: "C++"},
+        {iconPath: "/assets/skills/kotlin-icon.svg", label: "Kotlin"},
+
+        // Mobile development
+        {iconPath: "/assets/skills/compose-multiplatform.svg", label: "Jetpack Compose"},
+        {iconPath: "/assets/skills/flutter.svg", label: "Flutter"},
+
+        // Frontent
         {iconPath: "/assets/skills/html-5.svg", label: "HTML"},
         {iconPath: "/assets/skills/react.svg", label: "React"},
         {iconPath: "/assets/skills/css-3.svg", label: "CSS"},
         {iconPath: "/assets/technologies/tailwind-svgrepo-com.svg", label: "Tailwind CSS"},
-        {iconPath: "/assets/skills/javascript.svg", label: "JavaScript"},
-        {iconPath: "/assets/skills/nodejs.svg", label: "Node.js"},
-        {iconPath: "/assets/skills/expressjs-icon.svg", label: "Express.js"},
-        {iconPath: "/assets/skills/spring-boot.svg", label: "Spring Boot"},
-        {iconPath: "/assets/skills/mysql.svg", label: "mySQL"},
-        {iconPath: "/assets/skills/postgresql.svg", label: "PostgreSQL"},
-        {iconPath: "/assets/skills/mongodb.svg", label: "MongoDB"},
-        {iconPath: "/assets/technologies/icons8-firebase-24.png", label: "Firebase"},
-        {iconPath: "/assets/technologies/Amazon_Web_Services-Logo.wine.svg", label: "AWS"},
-        {iconPath: "/assets/skills/git-icon.svg", label: "Git"},
-        {iconPath: "/assets/skills/docker-icon.svg", label: "Docker"},
-        {iconPath: "/assets/skills/c-plusplus.svg", label: "C++"},
-        {iconPath: "/assets/skills/java.svg", label: "Java"},
-        {iconPath: "/assets/skills/python-svgrepo-com.svg", label: "Python"},
-        {iconPath: "/assets/skills/kotlin-icon.svg", label: "Kotlin"},
-        {iconPath: "/assets/skills/compose-multiplatform.svg", label: "Jetpack Compose"},
-        {iconPath: "/assets/skills/flutter.svg", label: "Flutter"},
+
         {iconPath: "/assets/technologies/loading-2-svgrepo-com.svg", label: "Always learning."},
+
     ];
 
     const pages = [
@@ -59,7 +79,7 @@ function App() {
             title: "Tridens d.o.o - Software Developer",
             subtitle: "March 24 2025 - Present",
             image: "/assets/pages/Tridens.png",
-            content: `Developing and maintaining scalable backend microservices and APIs. I use Java Spring Boot, Hibernate, PostgreSQL, and Keylcoak, alongside other tools like Mockito/JUnit and Postman for testing, Docker for containerization, and Apache Pulsar for message queuing.`
+            content: `Developing and maintaining distributed backend microservices and APIs. I use Java Spring Boot, Hibernate, PostgreSQL, and Keylcoak, alongside other tools like Mockito/JUnit and Postman for testing, Docker for containerization, and Apache Pulsar for message queuing.`
         },
         {
             title: "Setronica d.o.o - QA Engineer",
@@ -76,8 +96,12 @@ function App() {
     ];
 
     const cards = [
-        <AvatarCard title="Igor Polajžer" subtitle="SOFTWARE DEVELOPER" avatar="/assets/meta/Profesional_portrait.jpg"
-                    content="I'm Igor Polajžer, a Software Engineer and Master’s candidate at FERI. My interests cover scalable systems architecture, mobile and web application development, and AI/ML integration. Driven by a passion for lifelong learning, I focus on delivering robust, inovative solutions across the full software stack."/>,
+        <AvatarCard title="Igor Polajžer" subtitle="SOFTWARE ENGINEER" avatar="/assets/meta/Profesional_portrait.jpg"
+                    content="I'm Igor Polajžer, a **Software Engineer** and Master’s candidate at FERI.
+
+                    My interests cover ***backend and distributed systems, mobile application development, machine learning**, and **digital signal processing***.
+
+                    Driven by curiosity and a constant push to **improve.**"/>,
         <GridCard title="Tech Stack" subtitle="IF YOU WANT TO SEE IT IN ACTION, TAKE A LOOK AT MY PROJECTS"
                   gridElements={gridElements}/>,
         <PaginatedCard title="Work Experience" subtitle="COMPANIES I WORKED AT" pages={pages}/>,
@@ -138,7 +162,7 @@ function App() {
         {
             image: "/assets/morph_project/morph_project_thumbnail.jpg",
             route: "/projects/morph_project",
-            title: "Morph – AI-powered Personal Growth App",
+            title: "Morph – AI-powered Personal Growth App (My diploma thesis)",
             status: "In progress",
             description: `
 **Morph** is a cross-platform mobile app I created for my [diploma thesis](https://dk.um.si/IzpisGradiva.php?id=94126&lang=slv), a project where I challenged myself to blend **AI**, **gamification**, and intuitive design into a truly motivating self-improvement experience.
@@ -152,6 +176,10 @@ I’m excited to keep evolving it and turning it into something people can genui
             github: "https://github.com/IgorPolajzer/Morph",
             videos: [
                 "/assets/morph_project/Demonstracija_Morph.mov"
+            ],
+            pdfs: [
+                {title: "Diploma Thesis presentation", file: "/assets/morph_project/Igor_Polajzer_predstavitev_diplomske_naloge.pdf"},
+                {title: "Diploma Thesis - Development of the mobile application Morph", file: "/assets/morph_project/VS_Polajzer_Igor_2025.pdf"}
             ],
             technologies: [
                 {name: "Flutter", purpose: "Frontend / Mobile", logo: "/assets/skills/flutter.svg"},
@@ -311,6 +339,32 @@ The website, **masaze-pivko.com**, serves as the digital hub for a massage and w
                 {name: "AWS Lightsail", purpose: "Hosting", logo: "/assets/technologies/amazon-lightsail.svg"},
                 {name: "AWS Route 53", purpose: "Domain Provider", logo: "/assets/technologies/Route 53.svg"},
             ]
+        },
+        {
+            image: "/assets/maturitetna_naloga/slika.jpg",
+            route: "/projects/coin-counting-machine",
+            title: "Coin counting machine (Final Matura Thesis)",
+            status: "Completed",
+            description: `This project was the start of my engineering journey, my final **matura project** to complete my education as a **Mechatronics Technician** at the Electrical and Computer School Ptuj. Looking back, it's where I first fell in love with building things that combine hardware, logic, and code.
+
+## The Build
+The device mechanically sorts Euro coins by size into separate compartments, where they trigger switches made from copper contacts and springs. An **Arduino Nano** reads these signals, counts and sums the coins, and displays the result on a 4x20 LCD screen.
+
+## Challenges & Lessons
+With zero prior programming experience, I had to learn Arduino's C-based language from scratch, debugging, iterating, and leaning on my mentor for guidance along the way. Beyond the code itself, I designed the sorting matrix and electrical schematics in **Splan**, wired the circuit in **Fritzing**, and modeled the housing in **Fusion 360**, with plenty of trial and error spent getting the mechanical tolerances right so coins would sort reliably every time.
+
+This project planted the seed for everything that followed. It's where I first experienced the full loop of designing, building, debugging, and refining an engineering solution, a process I still apply every day as a software developer.`,
+            pdfs: [
+                {title: "Matura Thesis presentation", file: "/assets/maturitetna_naloga/Igor_Polajzer_maturitetna_naloga_predstavitev.pdf"},
+                {title: "Matura Thesis - Coin counting machine", file: "/assets/maturitetna_naloga/Igor_Polajzer_maturitetna_naloga.pdf"}
+            ],
+            technologies: [
+                {name: "Arduino Nano", purpose: "Microcontroller", logo: "/assets/technologies/Arduino_Nano_v3_0.svg"},
+                {name: "AZ-Delivery 4x20 LCD + I2C Adapter", purpose: "Display Output", logo: "/assets/technologies/i2c-bus.svg"},
+                {name: "Arduino IDE", purpose: "Programming Environment", logo: "/assets/technologies/Arduino_IDE_logo.svg"},
+                {name: "Splan", purpose: "Electrical Schematic Design", logo: "/assets/technologies/splan-sPlan70.svg"},
+                {name: "Fusion 360", purpose: "3D Modeling", logo: "/assets/technologies/Fusion360_Logo.svg"},
+            ]
         }
     ];
 
@@ -392,6 +446,7 @@ The website, **masaze-pivko.com**, serves as the digital hub for a massage and w
                                     url={project.access_url}
                                     videos={project.videos}
                                     technologies={project.technologies}
+                                    pdfs={project.pdfs}
                                     custom={project.custom}
                                 />
                             }

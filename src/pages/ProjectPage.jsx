@@ -1,7 +1,10 @@
 import React from "react";
 import ReactMarkdown from "react-markdown";
+import {renderPDFSection} from "../util";
 
-export default function ProjectPage({title, status, description, githubUrl, url, videos, technologies, custom}) {
+export default function ProjectPage({title, status, description, githubUrl, url, videos, technologies, pdfs, custom}) {
+    const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
     return (
         <div className="px-[9%] py-10 text-[var(--color-text-base)]">
             <div className="bg-white/10 shadow-md rounded-3xl p-6 backdrop-blur-md">
@@ -69,6 +72,15 @@ export default function ProjectPage({title, status, description, githubUrl, url,
                 )}
 
                 {custom && <div className="mb-6">{custom}</div>}
+
+                {/* PDFS */}
+                {pdfs && pdfs.length > 0 && (
+                    <div className="mb-6">
+                        {pdfs.map((pdf) =>
+                            renderPDFSection(pdf.title, pdf.file, pdf.description, isMobile)
+                        )}
+                    </div>
+                )}
 
                 {/* WEBSITE */}
                 {url && (
