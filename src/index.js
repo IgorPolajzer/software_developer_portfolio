@@ -162,7 +162,7 @@ function App() {
         {
             image: "/assets/morph_project/morph_project_thumbnail.jpg",
             route: "/projects/morph_project",
-            title: "Morph – AI-powered Personal Growth App (My diploma thesis)",
+            title: "Morph – AI-powered Personal Growth App (Computer Science Diploma Thesis)",
             status: "In progress",
             description: `
 **Morph** is a cross-platform mobile app I created for my [diploma thesis](https://dk.um.si/IzpisGradiva.php?id=94126&lang=slv), a project where I challenged myself to blend **AI**, **gamification**, and intuitive design into a truly motivating self-improvement experience.
@@ -343,7 +343,7 @@ The website, **masaze-pivko.com**, serves as the digital hub for a massage and w
         {
             image: "/assets/maturitetna_naloga/slika.jpg",
             route: "/projects/coin-counting-machine",
-            title: "Coin counting machine (Final Matura Thesis)",
+            title: "Coin counting machine (Mechatronics Matura Thesis)",
             status: "Completed",
             description: `This project was the start of my engineering journey, my final **matura project** to complete my education as a **Mechatronics Technician** at the Electrical and Computer School Ptuj. Looking back, it's where I first fell in love with building things that combine hardware, logic, and code.
 
