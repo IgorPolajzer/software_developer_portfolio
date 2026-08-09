@@ -162,6 +162,7 @@ function App() {
         {
             image: "/assets/daq_platform/daq_platform.png",
             route: "/projects/real-time-daq-platform",
+            github: "https://github.com/IgorPolajzer/daq_platform",
             title: "Real-Time DAQ & Signal Analysis Platform",
             status: "Completed",
             description: `
