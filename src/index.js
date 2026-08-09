@@ -160,10 +160,36 @@ function App() {
 
     const projects = [
         {
+            image: "/assets/daq_platform/daq_platform.png",
+            route: "/projects/real-time-daq-platform",
+            title: "Real-Time DAQ & Signal Analysis Platform",
+            status: "Completed",
+            description: `
+A modular real-time data acquisition and signal analysis platform, built out of curiosity about **digital signal processing** and a wish to get hands-on with **embedded systems**.
+
+The application resembles a simplified engineering measurement tool. Its central idea is a strict separation between **data acquisition** and **signal processing**: the pipeline is **source-agnostic**, running identically whether the samples come from a microphone, an Arduino, or a WAV file.`,
+            pdfs: [
+                {title: "Project presentation", file: "/assets/daq_platform/dewesoft_presentation.pdf"},
+            ],
+            videos: [
+                "/assets/daq_platform/daq_platform_demo.webm"
+            ],
+            technologies: [
+                {name: "Python", purpose: "Language", logo: "/assets/skills/python-svgrepo-com.svg"},
+                {name: "NumPy", purpose: "Signal Processing", logo: "/assets/technologies/NumPy_logo_2020.svg"},
+                {name: "ScyPy", purpose: "Signal Processing", logo: "/assets/technologies/SCIPY_2.svg"},
+                {name: "Arduino Nano", purpose: "ADC / Sensor Acquisition", logo: "/assets/technologies/Arduino_Nano_v3_0.svg"},
+                {name: "PyQt6", purpose: "UI Framework", logo: "/assets/technologies/Qt_logo_2016.svg"},
+                {name: "sounddevice", purpose: "Audio Acquisition", logo: "/assets/technologies/pypi-seeklogo.svg"},
+                {name: "soundfile", purpose: "WAV I/O", logo: "/assets/technologies/pypi-seeklogo.svg"},
+                {name: "pyserial", purpose: "Serial Acquisition", logo: "/assets/technologies/pypi-seeklogo.svg"}
+            ]
+        },
+        {
             image: "/assets/morph_project/morph_project_thumbnail.jpg",
             route: "/projects/morph_project",
             title: "Morph – AI-powered Personal Growth App (Computer Science Diploma Thesis)",
-            status: "In progress",
+            status: "Completed",
             description: `
 **Morph** is a cross-platform mobile app I created for my [diploma thesis](https://dk.um.si/IzpisGradiva.php?id=94126&lang=slv), a project where I challenged myself to blend **AI**, **gamification**, and intuitive design into a truly motivating self-improvement experience.
 
