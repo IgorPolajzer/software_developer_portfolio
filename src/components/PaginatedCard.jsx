@@ -21,7 +21,7 @@ function PaginatedCard({title, subtitle, pages}) {
                 <h2 className="font-semibold text-[var(--color-subtitle)]">{subtitle}</h2>
             </div>
 
-            <div className="relative w-full max-w-4xl">
+            <div className="relative w-full min-w-0 max-w-4xl">
                 <button
                     onClick={movePrev}
                     className="absolute top-1/2 left-2 -translate-y-1/2 bg-[var(--color-bg-primary-opacity)] hover:bg-white/40 text-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg z-10"
@@ -65,7 +65,7 @@ function PaginatedCard({title, subtitle, pages}) {
                         {pages.map((page, idx) => (
                             <div
                                 key={idx}
-                                className="flex-shrink-0 w-full flex flex-col items-center justify-center p-6 bg-[var(--color-bg-primary-opacity)] rounded-2xl text-center border-2 border-[var(--color-text-base)]"
+                                className="flex-shrink-0 w-full min-w-0 flex flex-col items-center justify-center p-6 bg-[var(--color-bg-primary-opacity)] rounded-2xl text-center border-2 border-[var(--color-text-base)]"
                             >
                                 <img
                                     src={page.image}

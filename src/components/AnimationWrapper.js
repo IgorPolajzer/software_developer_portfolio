@@ -30,7 +30,7 @@ const controls = useAnimation();
                         initial="hidden"
                         animate={isSmallScreen ? "visible" : controls}
                         variants={variants}
-                        className="md:w-3/4 mx-auto mb-10 rounded-3xl bg-white/5 shadow-lg overflow-hidden flex flex-col md:flex-row items-center border-2 border-[var(--color-text-base)]"
+                        className="w-full md:w-3/4 mx-auto mb-10 rounded-3xl bg-white/5 shadow-lg overflow-hidden flex flex-col md:flex-row items-center border-2 border-[var(--color-text-base)]"
                     >
                 {card}
             </motion.div>
