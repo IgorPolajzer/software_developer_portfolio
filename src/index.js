@@ -407,6 +407,11 @@ This project planted the seed for everything that followed. It's where I first e
             file: "/assets/qualifications/Igor_Polajzer_FERI_RIT_diploma.pdf"
         },
         {
+            title: "Dewesoft PRO Training – DAQ & Signal Analysis",
+            description: "Completion certificates for **10 [Dewesoft Academy](https://dewesoft.com/academy/online) PRO Training courses**, including the *PRO Star* qualification. Covers the full measurement chain: **sensors and signal conditioning**, **data acquisition**, and **digital signal processing** (*FFT, order analysis, strain, vibration, and acoustics*).",
+            file: "/assets/qualifications/Dewesoft_PRO_Training_certificates.pdf"
+        },
+        {
             title: "The Complete Flutter\n" +
                 "Development Bootcamp\n" +
                 "with Dart",
