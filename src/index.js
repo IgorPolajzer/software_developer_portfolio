@@ -394,8 +394,7 @@ With zero prior programming experience, I had to learn Arduino's C-based languag
 
 This project planted the seed for everything that followed. It's where I first experienced the full loop of designing, building, debugging, and refining an engineering solution, a process I still apply every day as a software developer.`,
             pdfs: [
-                {title: "Matura Thesis presentation", file: "/assets/maturitetna_naloga/Igor_Polajzer_maturitetna_naloga_predstavitev.pdf"},
-                {title: "Matura Thesis - Coin counting machine", file: "/assets/maturitetna_naloga/Igor_Polajzer_maturitetna_naloga.pdf"}
+                {title: "Matura Thesis presentation", file: "/assets/maturitetna_naloga/Igor_Polajzer_maturitetna_naloga_predstavitev.pdf"}
             ],
             technologies: [
                 {name: "Arduino Nano", purpose: "Microcontroller", logo: "/assets/technologies/Arduino_Nano_v3_0.svg"},
