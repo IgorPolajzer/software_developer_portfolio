@@ -76,10 +76,16 @@ function App() {
 
     const pages = [
         {
+            title: "Dewesoft d.o.o - Engineering Internship",
+            subtitle: "October 2 2026 - Present",
+            image: "/assets/pages/dewesoft_logo.png",
+            content: `Six-month multidisciplinary engineering rotation across product development, testing, application engineering and customer solutions. Working with data acquisition systems, sensors and signal analysis across the full measurement chain.`
+        },
+        {
             title: "Tridens d.o.o - Software Developer",
-            subtitle: "March 24 2025 - Present",
+            subtitle: "March 24 2025 - October 1 2026",
             image: "/assets/pages/Tridens.png",
-            content: `Developing and maintaining distributed backend microservices and APIs. I use Java Spring Boot, Hibernate, PostgreSQL, and Keylcoak, alongside other tools like Mockito/JUnit and Postman for testing, Docker for containerization, and Apache Pulsar for message queuing.`
+            content: `Developed and maintained distributed backend microservices and APIs. I used Java Spring Boot, Hibernate, PostgreSQL, and Keycloak, alongside other tools like Mockito/JUnit and Postman for testing, Docker for containerization, and Apache Pulsar for message queuing.`
         },
         {
             title: "Setronica d.o.o - QA Engineer",
@@ -145,10 +151,16 @@ function App() {
             iconPath: "../assets/timeline_icons/setronica_logo.png",
         },
         {
-            date: "March 2025 - Present",
+            date: "March 2025 - October 2026",
             title: "Backend Developer - Tridens d.o.o",
             location: "Maribor - Slovenia",
             iconPath: "../assets/timeline_icons/Tridens.png",
+        },
+        {
+            date: "October 2026 - Present",
+            title: "Engineering Intern - Dewesoft",
+            location: "Trbovlje - Slovenia",
+            iconPath: "../assets/timeline_icons/dewesoft_logo.svg",
         },
         {
             date: "October 2025 - Present [Expected graduation: 2027]",
